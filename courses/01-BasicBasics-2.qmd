@@ -1,0 +1,82 @@
+# Installing and loading packages {#sec-bb-2}
+
+In this [Basic Basics](01-BasicBasics-0.qmd) lesson we're going to talk about *packages*. You likely won't get very far in R without packages. Sure, you could write all the functions you need for your analysis yourself if you wanted, but the great thing about the #rstats community is that people write code, bundle it into packages, and then give them away FOR FREE because they are so terribly nice. Once you are an #rstats expert, you can create your own packages and give back, but for now let's learn what packages are and how to use them.
+
+## Lesson Outcomes
+
+By the end of the lesson, you should be able to :
+
+-   explain what a package is
+-   install packages from the console (quadrant 2).
+-   use the `library` function to load packages at the top of your script (and understand why it is best to do it there and not in the console!)
+-   find useful information about how to use a particular package when you are trying something new.
+
+## What is a package?
+
+A package is a bundle of code that a generous person has written, tested, and then given away. Most of the time packages are designed to solve a specific problem, so they to pull together functions related to a particular data science problem (e.g., data wrangling, visualisation, inference). Anyone can write a package, and you can get packages from lots of different places, but for beginners the best thing to do is get packages from CRAN, the *Comprehensive R Archive Network*. It's easier than any of the alternatives, and people tend to wait until their package is stable before submitting it to CRAN, so you're less likely to run into problems. You can find a list of all the packages on CRAN [here](https://cran.r-project.org/web/packages/available_packages_by_name.html).
+
+Some packages are bundles of packages. For example, the [tidyverse](https://www.tidyverse.org/packages/) is an umbrella package that pulls together lots of individual data wrangling and visualisation packages, so that when you install `tidyverse` you get 8 packages for price of 1 (actually they are free, but you get what I mean). The packages in the tidyverse include:
+
+-   ggplot2
+-   dplyr
+-   tidyr
+-   readr
+-   purrr
+-   tibble
+-   stringr
+-   forcats
+
+::: callout-note
+The Tidyverse team have been busy since we first developed RYouWithMe! In the videos, we work with Tidyverse version 1.2.1. Now in February 2025, the team have most recently released Tidyverse 2.0.0.
+
+So what is different? The screenshot below shows the console output that appears after I run `library(tidyverse)`. You will notice that the version numbers on each of the packages that make up the tidyverse have been updated AND that there are now **9 packages** included with your Tidyverse install; the lubridate package, which makes working with dates easy, is now included in the Tidyverse bundle. The other package updates most often involve adding new functions and “deprecating” functions that are no longer the best solution to a data problem. This means that the function is still in the package and will still work, but you might get a little warning message recommending that you switch to a better version.
+
+We have checked and all the functions we introduce in RYouWithMe still work just fine, so don’t worry too much if the that package version you can see in the videos is a bit different to the one you are using on your machine.
+:::
+
+![a screenshot of the console output after I run library(tidyverse)](/courses/img/tidyverse.png){fig-alt="a screenshot of the console output after I run library(tidyverse)"}
+
+## How do I install and load packages?
+
+In this screencast, we'll cover:
+
+-   How to install packages
+-   How to use the `library` function to load packages when you want to use them
+
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/v6VygIgvoZU?rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Your turn
+
+Watch the video and then carry out the following steps:
+
+1.  Install the `tidyverse` and `here` packages
+2.  Add a section label to your script and `library()` calls to the top of your script to load the `tidyverse` and `here` packages. You'll be using these packages to read in data in Basic Basics Lesson 3!\
+3.  Browse the list of packages on CRAN, find one that looks interesting and install it (just because now you know how!) **Hint** - we will probably use the `janitor` and `skimr` packages soon, so have a go at installing those.
+
+## I've installed a package... now what?
+
+Installing and loading packages is all well and good - but knowing what they do is pretty important when you want to use them! CRAN requires that package authors write documentation that goes with their package and these documents are designed to give you an idea of what functions are included and what the package can be used for.
+
+When you are looking for information about a package there are a few places to look. Lets use the `janitor` package as an example...
+
+### Look on CRAN
+
+The README file is most often pretty useful and sometimes includes examples of how to use functions from the package. Check out the [janitor README](https://cran.r-project.org/web/packages/janitor/readme/README.html) here.
+
+![](/courses/img/CRAN_janitor.png){width="300"}
+
+### Find the package vignette
+
+A vignette is a long form guide to using the package and the functions within it. For the `janitor` package, there is a link to the vignette in the README file. Check out the [janitor vignette](http://sfirke.github.io/janitor/articles/janitor.html) here.
+
+### Google it
+
+You can see when we google "how to use the janitor package R" the first things that come up are CRAN documentation but under that there are links to documentation, blog posts, and YouTube videos by other R users who have found the package helpful and written about it.
+
+![](/courses/img/google_janitor.png){width="300"}
+
+### Have a look on social media
+
+Twitter used to be a great place to find people who have written about how to use a package; most of the generous and friendly #rstats people have now switched to Mastodon or BlueSky.
+
+Now that you have the `tidyverse` and `here` (and a few other potentially useful packages) installed, let's learn how to read in some data in [Lesson 3!](01-BasicBasics-3.qmd)

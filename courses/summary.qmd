@@ -1,0 +1,36 @@
+# What's next?
+
+RYouWithMe barely scratches the surface when it comes to the power of R for data wrangling, visualisation and analysis, but hopefully you now have the basics under your belt and can forge a learning journey for yourself.
+
+Here are a few things that you might be interested in exploring next...
+
+## How to do statistical analysis in R
+
+Now that you have wrangled and visualised your data, you probably want to do some stats. The statistics you need to do depend a lot on your data and research question, but Danielle Navarro's [Learning Statistics with R book](https://learningstatisticswithr.com/book/) is a great place to start. The research methods team in Psychology at University of Glasgow have made their awesome [PsyTeachR resources](https://psyteachr.github.io/) open to anyone too.
+
+## How to use Quarto for reproducible reporting
+
+RMarkdown is nice, but Quarto is where all the exciting developments are happening. Check out the [quarto documentation](https://quarto.org/) and then explore blog posts by R users who have made the move to quarto.
+
+-   [how to make a quarto website](https://jadeyryan.com/blog/2024-02-19_beginner-quarto-netlify/) by Jadey Ryan
+-   [how to make a quarto blog](https://www.crumplab.com/blog/post_887_8_25_22_quartoblog/) by Matthew Crump
+-   [how to add a quarto blog to an existing quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/) by Sam Csik
+-   [how to make quarto slides](https://jillymackay.com/post/professionally-sexy-quarto/) by Jilly Mackay
+
+## How to use git and github for version control (and publishing your quarto docs)
+
+Jenny Bryan's [Happy with with R](https://happygitwithr.com/) site is the best resource for learning about git and github. R for the Rest of Us also has a [great series of videos](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r) walking you through the process of working with version control.
+
+## How to write your own functions
+
+R packages are great, but you will eventually get to the point that you want to write your own functions. The [functions chapter](https://r4ds.had.co.nz/functions.html) in R for Data Science is a good place to start. I also like the resources in the [STAT545 course](https://stat545.com/functions-part1.html) by Jenny Bryan.
+
+## How to make nice tables in R
+
+There are more and more great pacakges making tables. Here are a few favourites you might like to explore.
+
+-   [`gt`](https://gt.rstudio.com/)
+-   [`gtsummary`](https://www.danieldsjoberg.com/gtsummary/)
+-   [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
+-   [`table1`](https://cran.r-project.org/web/packages/table1/vignettes/table1-examples.html)
+-   [`tableone`](https://cran.r-project.org/web/packages/tableone/vignettes/introduction.html)

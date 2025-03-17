@@ -1,0 +1,16 @@
+---
+title: "About"
+about: 
+  template: trestles
+  links:
+    - text: Bluesky
+      href: https://bsky.app/profile/rladiessydney.bsky.social
+    - text: Github
+      href: https://github.com/rladiessydney
+    - text: Email
+      href: sydney@rladies.org
+    - text: Meetup
+      href: https://www.meetup.com/rladies-sydney/
+---
+
+Insert about information...

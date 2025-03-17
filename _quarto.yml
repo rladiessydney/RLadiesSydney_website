@@ -1,0 +1,83 @@
+project:
+  type: website
+
+website:
+  title: "RLadiesSydney"
+  search: 
+    location: sidebar
+    type: textbox
+  navbar:
+    right:
+      - href: courses/index.qmd
+        text: RYouWithMe
+      - href: posts.qmd
+        text: Blog
+      - href: events.qmd
+        text: Events
+      - href: about.qmd
+        text: About
+      - href: index.qmd
+        text: Home
+  sidebar: 
+    style: "floating"
+    search: TRUE
+    contents: 
+      - section: "RYouWithMe"
+        contents:
+          - href: courses/index.qmd
+            text: "About"
+          - section: "BasicBasics"
+            href: courses/01-BasicBasics-0.qmd
+            contents: 
+              - href: courses/01-BasicBasics-1.qmd
+                text: "BasicBasics 1"
+              - href: courses/01-BasicBasics-2.qmd
+                text: "BasicBasics 2"
+              - href: courses/01-BasicBasics-3.qmd
+                text: "BasicBasics 3"
+          - section: "CleanItUp"
+            href: courses/02-CleanItUp-0.qmd
+            contents: 
+              - href: courses/02-CleanItUp-1.qmd
+                text: "CleanItUp 1"
+              - href: courses/02-CleanItUp-2.qmd
+                text: "CleanItUp 2"
+              - href: courses/02-CleanItUp-3.qmd
+                text: "CleanItUp 3"
+              - href: courses/02-CleanItUp-5.qmd
+                text: "CleanItUp 4"
+          - section: "VizWhiz"
+            href: courses/03-VizWhiz-0.qmd
+            contents: 
+              - href: courses/03-VizWhiz-1.qmd
+                text: "VizWhiz 1"
+              - href: courses/03-VizWhiz-2.qmd
+                text: "VizWhiz 2"
+              - href: courses/03-VizWhiz-3.qmd
+                text: "VizWhiz 3"
+              - href: courses/03-VizWhiz-4.qmd
+                text: "VizWhiz 4"
+              - href: courses/03-VizWhiz-5.qmd
+                text: "VizWhiz 5"
+          - section: "MarkyMark"
+            href: courses/04-MarkyMark-0.qmd
+            contents: 
+              - href: courses/04-MarkyMark-1.qmd
+                text: "MarkyMark 1"
+              - href: courses/04-MarkyMark-2.qmd
+                text: "MarkyMark 2"
+              - href: courses/04-MarkyMark-3.qmd
+                text: "MarkyMark 3"
+              - href: courses/04-MarkyMark-4.qmd
+                text: "MarkyMark 4"
+          - href: courses/summary.qmd
+            text: "What's next?"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+

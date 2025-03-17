@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>vizwhiz-1 – RLadiesSydney</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">RLadiesSydney</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../events.html"> 
+<span class="menu-text">Events</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../courses/index.html">RYouWithMe</a></li><li class="breadcrumb-item"><a href="../courses/03-VizWhiz-0.html">VizWhiz</a></li><li class="breadcrumb-item"><a href="../courses/03-VizWhiz-1.html">VizWhiz 1</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">RYouWithMe</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../courses/01-BasicBasics-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BasicBasics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/01-BasicBasics-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BasicBasics 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/01-BasicBasics-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BasicBasics 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/01-BasicBasics-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BasicBasics 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../courses/02-CleanItUp-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CleanItUp</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/02-CleanItUp-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CleanItUp 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/02-CleanItUp-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CleanItUp 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/02-CleanItUp-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CleanItUp 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/02-CleanItUp-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CleanItUp 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../courses/03-VizWhiz-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/03-VizWhiz-1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">VizWhiz 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/03-VizWhiz-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/03-VizWhiz-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/03-VizWhiz-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/03-VizWhiz-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz 5</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../courses/04-MarkyMark-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MarkyMark</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/04-MarkyMark-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MarkyMark 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/04-MarkyMark-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MarkyMark 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/04-MarkyMark-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MarkyMark 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/04-MarkyMark-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MarkyMark 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#plotting-raw-data" id="toc-plotting-raw-data" class="nav-link active" data-scroll-target="#plotting-raw-data">Plotting raw data</a>
+  <ul class="collapse">
+  <li><a href="#so-if-not-bar-plots-then-what" id="toc-so-if-not-bar-plots-then-what" class="nav-link" data-scroll-target="#so-if-not-bar-plots-then-what">So, if not bar plots, then what?</a></li>
+  <li><a href="#lesson-outcomes" id="toc-lesson-outcomes" class="nav-link" data-scroll-target="#lesson-outcomes">Lesson Outcomes</a></li>
+  <li><a href="#plotting-bug-levels-by-year" id="toc-plotting-bug-levels-by-year" class="nav-link" data-scroll-target="#plotting-bug-levels-by-year">Plotting bug levels by year</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-to-have-a-go" id="toc-your-turn-to-have-a-go" class="nav-link" data-scroll-target="#your-turn-to-have-a-go">Your turn to have a go</a></li>
+  </ul></li>
+  <li><a href="#using-colour-to-plot-bug-levels-by-site" id="toc-using-colour-to-plot-bug-levels-by-site" class="nav-link" data-scroll-target="#using-colour-to-plot-bug-levels-by-site">Using colour to plot bug levels by site</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-to-have-a-go-1" id="toc-your-turn-to-have-a-go-1" class="nav-link" data-scroll-target="#your-turn-to-have-a-go-1">Your turn to have a go</a></li>
+  </ul></li>
+  <li><a href="#using-facet_wrap-to-plot-sites-separately" id="toc-using-facet_wrap-to-plot-sites-separately" class="nav-link" data-scroll-target="#using-facet_wrap-to-plot-sites-separately">Using facet_wrap() to plot sites separately</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-to-have-a-go-2" id="toc-your-turn-to-have-a-go-2" class="nav-link" data-scroll-target="#your-turn-to-have-a-go-2">Your turn to have a go</a></li>
+  </ul></li>
+  <li><a href="#putting-it-all-together-dplyr-ggplot" id="toc-putting-it-all-together-dplyr-ggplot" class="nav-link" data-scroll-target="#putting-it-all-together-dplyr-ggplot">Putting it all together (dplyr + ggplot)</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-to-have-a-go-3" id="toc-your-turn-to-have-a-go-3" class="nav-link" data-scroll-target="#your-turn-to-have-a-go-3">Your turn to have a go</a></li>
+  </ul></li>
+  <li><a href="#how-to-get-your-plots-out-of-r-studio" id="toc-how-to-get-your-plots-out-of-r-studio" class="nav-link" data-scroll-target="#how-to-get-your-plots-out-of-r-studio">How to get your plots out of R Studio</a></li>
+  <li><a href="#challenge---plot-your-own-data" id="toc-challenge---plot-your-own-data" class="nav-link" data-scroll-target="#challenge---plot-your-own-data">Challenge - plot your own data</a>
+  <ul class="collapse">
+  <li><a href="#looking-for-more" id="toc-looking-for-more" class="nav-link" data-scroll-target="#looking-for-more">Looking for more?</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="plotting-raw-data" class="level1">
+<h1>Plotting raw data</h1>
+<p>Until I<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> started learning R about a year ago, I had only ever plotted averaged data. My plots looked like this…</p>
+<p><img src="../courses/img/figure1.jpg" class="img-fluid"></p>
+<p>Or this….</p>
+<p><img src="../courses/img/figure2.jpg" class="img-fluid"></p>
+<p>In 2016, I remember seeing <a href="https://www.kickstarter.com/projects/1474588473/barbarplots">#barbarplots</a> t-shirts and tote bags at a conference, but back then I didn’t know that the figures were made in R.</p>
+<p><img src="../courses/img/barplot_psa1.jpg" class="img-fluid"></p>
+<blockquote class="blockquote">
+<p>Check out this <a href="https://www.youtube.com/watch?v=LFDbqw2xPbQ&amp;t=1s">video</a> for more info about the #barbarplots kickstarter campaign. And learn how to <a href="../courses/img/_Exploding_Barplot.gif">explode bar plots</a> using code from <a href="https://zenodo.org/record/574883#.XAUTspMzaRs">here</a>.</p>
+</blockquote>
+<section id="so-if-not-bar-plots-then-what" class="level2">
+<h2 class="anchored" data-anchor-id="so-if-not-bar-plots-then-what">So, if not bar plots, then what?</h2>
+<p>Bar plots with standard error bars obviously have their limitations, but what is the alternative? In this lesson, we’re going to learn about how to plot raw data using <code>ggplot2</code>. As in prior units, we’ll be using the sydneybeaches dataset, so be sure to have that on hand!</p>
+</section>
+<section id="lesson-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-outcomes">Lesson Outcomes</h2>
+<p>By the end of this lesson, you should be able to :</p>
+<ul>
+<li>use <code>geom_point</code>, <code>geom_jitter</code>, and <code>geom_quasirandom</code> to plot raw data</li>
+<li>use colour to differentiate subsets of data</li>
+<li>use <code>facet_wrap</code> to plot subsets of data separately</li>
+<li>combine <code>dpylr</code> functions like <code>filter</code> with <code>ggplot</code></li>
+<li>use <code>ggsave</code> to export plots</li>
+</ul>
+</section>
+<section id="plotting-bug-levels-by-year" class="level2">
+<h2 class="anchored" data-anchor-id="plotting-bug-levels-by-year">Plotting bug levels by year</h2>
+<p>If the councils that look after our beaches are doing their job, beaches should be less contaminated than they were 5 years ago, right? Let’s plot bug levels over time and see whether things seem to be getting better.</p>
+<p>In this screencast, we’ll review:</p>
+<ul>
+<li>How to write cleaned data to a new csv file</li>
+<li>How to plot raw data using <code>geom_point</code>, <code>geom_jitter</code>, and <code>geom_quasirandom</code></li>
+</ul>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VQE8yj6OEVc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</center>
+<p>Here’s the plot for reference:</p>
+<p><img src="../courses/img/bugsbyyear_jitter.png" class="img-fluid"></p>
+<section id="your-turn-to-have-a-go" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="your-turn-to-have-a-go">Your turn to have a go</h3>
+<p>Watch the video and then carry out the following steps:</p>
+<ol type="1">
+<li>Use <code>geom_point</code> to plot buglevels by year</li>
+<li>Play with <code>geom_jitter</code> and <code>geom_quasirandom</code>; which one is your favourite?</li>
+<li>Check out the <code>ggbeeswarm</code> <a href="https://github.com/eclarke/ggbeeswarm">vignette</a> and try to make your quasirandom plot “smiley” or “frowny”</li>
+<li>Try <code>geom_beeswarm</code> too!</li>
+</ol>
+</section>
+</section>
+<section id="using-colour-to-plot-bug-levels-by-site" class="level2">
+<h2 class="anchored" data-anchor-id="using-colour-to-plot-bug-levels-by-site">Using colour to plot bug levels by site</h2>
+<p>There doesn’t seem to be an obvious improvement in bug levels in the past 5 years. I wonder whether some beaches are just more variable than others. Let’s use colour to differentiate between different sites.</p>
+<p>In this screencast, we’ll review:</p>
+<ul>
+<li>How to plot raw data using <code>geom_jitter</code></li>
+<li>How to deal with NAs in your data</li>
+<li>How to use <code>coord_flip</code> to make axis labels visible</li>
+<li>How to differentiate subsets within your data by changing the point colour</li>
+<li>How to coerce variables into a different data format</li>
+</ul>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bl0fm8Zkt1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</center>
+<p>Here’s the plot for reference:</p>
+<p><img src="../courses/img/bugsbybeach_coloryear.png" class="img-fluid"></p>
+<section id="your-turn-to-have-a-go-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="your-turn-to-have-a-go-1">Your turn to have a go</h3>
+<p>Watch the video and then carry out the following steps:</p>
+<ol type="1">
+<li>Use <code>geom_jitter</code> to plot bug levels for each site, differentiating between values from 2013-2018 with different coloured points</li>
+<li>Try colouring the points by another variable (perhaps council or month). How does the visualisation change?</li>
+</ol>
+</section>
+</section>
+<section id="using-facet_wrap-to-plot-sites-separately" class="level2">
+<h2 class="anchored" data-anchor-id="using-facet_wrap-to-plot-sites-separately">Using facet_wrap() to plot sites separately</h2>
+<p>Using colour is one way to differentiate between data points associated with different variables. Alternatively, you can group the data into different mini-plots using facet_wrap.</p>
+<p>In this screencast, we’ll review:</p>
+<ul>
+<li>How to use <code>facet_wrap</code> to visualise beachbug levels across years, separately for each site.</li>
+</ul>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uYhCZ5T5nVA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</center>
+<p>Here’s the plot for reference:</p>
+<p><img src="../courses/img/bugsbybeach_facetsite_all.png" class="img-fluid"></p>
+<section id="your-turn-to-have-a-go-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="your-turn-to-have-a-go-2">Your turn to have a go</h3>
+<p>Watch the video and perform the following steps:</p>
+<ol type="1">
+<li>Use <code>geom_jitter</code> and <code>facet_wrap</code> to plot buglevels by year, separately for each site</li>
+<li>Try plotting buglevels by site, separately for each year. Hint: maybe using <code>coord_flip</code> is a good idea!</li>
+</ol>
+</section>
+</section>
+<section id="putting-it-all-together-dplyr-ggplot" class="level2">
+<h2 class="anchored" data-anchor-id="putting-it-all-together-dplyr-ggplot">Putting it all together (dplyr + ggplot)</h2>
+<p>What if you only want to compare a couple of sites? Or restrict the range of scores to exclude obvious outliers? You can combine dyplyr functions like <code>filter</code> with <code>ggplot</code> using the pipe %&gt;%. (The pipe was covered in #RYouWithMe Unit Clean It Up Lesson 1! Need a refresher? Click <a href="https://rladiessydney.netlify.com/courses/workshop/02-cleanitup-1/">here</a>!)</p>
+<p>In this screencast, we’ll review:</p>
+<ul>
+<li>How to use combine <code>filter</code> and <code>ggplot</code> to plot subsets of your data</li>
+</ul>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IJvA2RUMjQU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</center>
+<p>Here’s the plot for reference:</p>
+<p><img src="../courses/img/bondicoogee.jpeg" class="img-fluid"></p>
+<section id="your-turn-to-have-a-go-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="your-turn-to-have-a-go-3">Your turn to have a go</h3>
+<p>Watch the video and perform the following steps:</p>
+<ol type="1">
+<li>Pipe a <code>filter</code> function and a <code>ggplot</code> together to plot only values that are less than 1000</li>
+<li>Try changing the filter value to only plot values less than 500</li>
+<li>Use <code>filter</code> and <code>ggplot</code> to compare data from Coogee and Bondi</li>
+<li>Pick your two favorite beaches and make a plot that compares the variability in beachbug values</li>
+</ol>
+</section>
+</section>
+<section id="how-to-get-your-plots-out-of-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-get-your-plots-out-of-r-studio">How to get your plots out of R Studio</h2>
+<p>Of course, these beautiful plots are not much use if they are stuck in R Studio. The easiest way to export your plots and save them elsewhere on your computer is by using <code>ggsave</code>.</p>
+<p>In this screencast, we’ll review:</p>
+<ul>
+<li>How to export your plots using <code>ggsave</code> and <code>here</code></li>
+</ul>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6BVmWAZn_sE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</center>
+<p>Watch the video and perform the following steps:</p>
+<ol type="1">
+<li>Add a <code>ggsave</code> call after each chunk of code in your script to save your plots to a folder in your RYouWithMe project called “output”</li>
+<li>Use the source button to run your code from top to bottom.</li>
+<li>For Sydney-based R-Ladies: Pick your favourite exported plot and post it to the #ryouwithme_3_vizwhiz channel on Slack!</li>
+</ol>
+</section>
+<section id="challenge---plot-your-own-data" class="level2">
+<h2 class="anchored" data-anchor-id="challenge---plot-your-own-data">Challenge - plot your own data</h2>
+<p>The next step is to plot your own data as raw values.</p>
+<p>Steps to plotting your own raw data:</p>
+<ol type="1">
+<li>Remember that ggplot only likes “long” data, so if you have observations across several columns, go back to <a href="../02-CleanItUp-4/">Clean it up Lesson 4</a> and brush up on how to convert your wide data into long format</li>
+<li>Pick a categorical variable for your x axis</li>
+<li>Pick a continuous variable for your y axis</li>
+<li>Try out <code>geom_point</code>, <code>geom_jitter</code>, or <code>geom_quasirandom</code> and see which one makes the most sense for your data</li>
+<li>Export using <code>ggsave</code></li>
+</ol>
+<p>If you are one of our Sydney-based RLadies, share your success (and /or your frustration!) in our Slack channel #ryouwithme_3_vizwhiz!</p>
+<section id="looking-for-more" class="level3">
+<h3 class="anchored" data-anchor-id="looking-for-more">Looking for more?</h3>
+<p>Here are some additional resources:</p>
+<ul>
+<li>Paul van der Laken makes a good argument against bar graphs in his <a href="https://paulvanderlaken.com/2018/12/17/avoid-bar-plots-for-continuous-data-do-this-instead/">blog post here</a></li>
+<li>Hadley Wickham’s book R for Data Science is a good place to start re <a href="https://r4ds.had.co.nz/data-visualisation.html">data visualisation</a>.</li>
+<li>Nick Tierney and Saskia Freytag were talking data visualisation with Di Cook on the Credibly Curious podcast recently. Check out the episode <a href="https://soundcloud.com/crediblycurious/episode-5-graphics">here</a>.</li>
+</ul>
+<p>On to <a href="../courses/03-VizWhiz-2.html">Lesson 2</a></p>
+
+
+</section>
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Jen Richmond, R-Ladies Sydney co-founder and #RYouWithMe screencaster!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

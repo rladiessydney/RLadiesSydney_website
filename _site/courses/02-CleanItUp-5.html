@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>cleanitup-5 – RLadiesSydney</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">RLadiesSydney</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../events.html"> 
+<span class="menu-text">Events</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../courses/index.html">RYouWithMe</a></li><li class="breadcrumb-item"><a href="../courses/02-CleanItUp-0.html">CleanItUp</a></li><li class="breadcrumb-item"><a href="../courses/02-CleanItUp-5.html">CleanItUp 4</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">RYouWithMe</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../courses/01-BasicBasics-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BasicBasics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/01-BasicBasics-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BasicBasics 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/01-BasicBasics-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BasicBasics 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/01-BasicBasics-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BasicBasics 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../courses/02-CleanItUp-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CleanItUp</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/02-CleanItUp-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CleanItUp 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/02-CleanItUp-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CleanItUp 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/02-CleanItUp-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CleanItUp 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/02-CleanItUp-5.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">CleanItUp 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../courses/03-VizWhiz-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/03-VizWhiz-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/03-VizWhiz-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/03-VizWhiz-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/03-VizWhiz-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/03-VizWhiz-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VizWhiz 5</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../courses/04-MarkyMark-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MarkyMark</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/04-MarkyMark-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MarkyMark 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/04-MarkyMark-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MarkyMark 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/04-MarkyMark-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MarkyMark 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses/04-MarkyMark-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MarkyMark 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-ciu-5" id="toc-sec-ciu-5" class="nav-link active" data-scroll-target="#sec-ciu-5">Pivot Wide to Long to Wide</a>
+  <ul class="collapse">
+  <li><a href="#why-do-you-need-to-know-how-to-convert-your-data-from-wide-to-long-or-vice-versa" id="toc-why-do-you-need-to-know-how-to-convert-your-data-from-wide-to-long-or-vice-versa" class="nav-link" data-scroll-target="#why-do-you-need-to-know-how-to-convert-your-data-from-wide-to-long-or-vice-versa">Why do you need to know how to convert your data from wide to long (or vice versa)?</a></li>
+  <li><a href="#should-i-could-copy-and-paste_transpose-the-scores" id="toc-should-i-could-copy-and-paste_transpose-the-scores" class="nav-link" data-scroll-target="#should-i-could-copy-and-paste_transpose-the-scores">Should I could copy and paste_transpose the scores?</a></li>
+  <li><a href="#example-1-which-bakers-can-identify-spices" id="toc-example-1-which-bakers-can-identify-spices" class="nav-link" data-scroll-target="#example-1-which-bakers-can-identify-spices">Example 1: which bakers can identify spices?</a>
+  <ul class="collapse">
+  <li><a href="#using-pivot_longer-wide-to-long" id="toc-using-pivot_longer-wide-to-long" class="nav-link" data-scroll-target="#using-pivot_longer-wide-to-long">Using <code>pivot_longer</code> (wide to long)</a></li>
+  <li><a href="#using-pivot_wider-long-to-wide" id="toc-using-pivot_wider-long-to-wide" class="nav-link" data-scroll-target="#using-pivot_wider-long-to-wide">Using <code>pivot_wider</code> (long to wide)</a></li>
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">Your turn</a></li>
+  </ul></li>
+  <li><a href="#example-2-long-beaches-are-better-than-wide" id="toc-example-2-long-beaches-are-better-than-wide" class="nav-link" data-scroll-target="#example-2-long-beaches-are-better-than-wide">Example 2: long beaches are better than wide</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1">Your turn</a></li>
+  </ul></li>
+  <li><a href="#example-3-a-tricky-one" id="toc-example-3-a-tricky-one" class="nav-link" data-scroll-target="#example-3-a-tricky-one">Example 3: A tricky one</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2">Your turn</a></li>
+  </ul></li>
+  <li><a href="#how-did-you-go" id="toc-how-did-you-go" class="nav-link" data-scroll-target="#how-did-you-go">How did you go?</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-try-your-own-data" id="toc-your-turn-try-your-own-data" class="nav-link" data-scroll-target="#your-turn-try-your-own-data">Your turn: Try your own data</a></li>
+  <li><a href="#looking-for-more" id="toc-looking-for-more" class="nav-link" data-scroll-target="#looking-for-more">Looking for more?</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="sec-ciu-5" class="level1">
+<h1>Pivot Wide to Long to Wide</h1>
+<p>Learning how to make wide data long, or long data wide, might be one of the biggest stumbling blocks that R learners encounter.</p>
+<p>But don’t panic, there are NEW functions in the <code>tidyr</code> that make the process of converting your data from wide to long format and back again, much easier… so much so that, like RLady <a href="@sharlagelfand">Sharla Gelfand</a>, you might even get excited to do it!</p>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p><p>honestly i used to dread having to reshape my data because it meant relearning spread() and gather() every single time but pivot_wider() and pivot_longer() are so easy to use that now i get excited when i have to do it 🤓</p>
+<p></p>
+<p>— Sharla Gelfand (<span class="citation" data-cites="sharlagelfand">@sharlagelfand</span>) <a href="https://twitter.com/sharlagelfand/status/1252656466852548608?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<section id="why-do-you-need-to-know-how-to-convert-your-data-from-wide-to-long-or-vice-versa" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-you-need-to-know-how-to-convert-your-data-from-wide-to-long-or-vice-versa">Why do you need to know how to convert your data from wide to long (or vice versa)?</h2>
+<p>In R circles there is a lot of talk of the need for “tidy data”. You can read more about what Hadley Wickham (creator of the Tidyverse) means by <a href="https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html">tidy data here</a>, but in short, tidy data is when</p>
+<ol type="1">
+<li>Each variable forms a column.</li>
+<li>Each observation forms a row.</li>
+<li>Each type of observational unit forms a table.</li>
+</ol>
+<p>When you entered your data in excel, you probably entered it in wide format. Data in wide format has observations spread across several columns; each column contains data from a different condition (or combination of conditions); wide data is messy.</p>
+<p>In the wide example below, we have scores from participants who were tested twice (Time 1 and Time 2) after studying different lists of words under two different conditions (Condition 1 and Condition 2).</p>
+<p><img src="../courses/img/2_wideexample.png" class="img-fluid"></p>
+<p>In contrast, data in long format has all the observations in a single column and variables in separate columns.</p>
+<p><img src="../courses/img/1_longexample.png" class="img-fluid"></p>
+<p>Many functions in R assume your data is “tidy” and just work better when you feed them long data.</p>
+</section>
+<section id="should-i-could-copy-and-paste_transpose-the-scores" class="level2">
+<h2 class="anchored" data-anchor-id="should-i-could-copy-and-paste_transpose-the-scores">Should I could copy and paste_transpose the scores?</h2>
+<p>No, no, no… this is not as hard as it looks. R employs cute monsters under the hood to pivot your data from wide to long <code>pivot_longer</code>, or from long to wide <code>pivot_wider</code>. All in a single line of code.</p>
+<p><img src="../courses/img/pivot_monsters.png" class="img-fluid"></p>
+<p>Credit to <a href="https://twitter.com/Allison_Horst">Allison Horst</a> for the CUTE art.</p>
+<p>In this lesson, we will use three different examples to illustrate how to use <code>pivot_longer</code> and <code>pivot_wider</code> to convert your data from wide to long and back to wide.</p>
+<ol type="1">
+<li>Great British Bakeoff data from <a href="https://twitter.com/apreshill">Alison Hill</a></li>
+<li>Some summary data from our own sydneybeaches dataset</li>
+<li>A tricky example from a cognition experiment out of <a href="https://twitter.com/djnavarro">Dani Navarro’s</a> lab</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you haven’t already, now is the time to install the RYouWithMe data package. Check out the <a href="https://ryouwithme.netlify.app/">package vignette</a> or watch <a href="https://www.youtube.com/watch?v=P9l0Wn3tLyc&amp;list=PLkAPliqRo9-kvZx8DkmI1OODBaJTAs0ld&amp;index=">this video</a> for details about how to install and use the package to read the bakers, beach summary and frames data.</p>
+</div>
+</div>
+<p>Each example is a little different, but in each case we can use <code>pivot_longer</code> and <code>pivot_wider</code> to switch between different formats. We’ll walk you through the process step by step, but the basic idea is shown graphically in this lovely animation made by <a href="https://bsky.app/profile/grrrck.xyz">Garrick Aden-Buie</a> and adapted by <a href="https://bsky.app/profile/dataandme.bsky.social">Mara Averick</a>.</p>
+<p><img src="../courses/img/tidyr-longer-wider.gif" class="img-fluid"></p>
+</section>
+<section id="example-1-which-bakers-can-identify-spices" class="level2">
+<h2 class="anchored" data-anchor-id="example-1-which-bakers-can-identify-spices">Example 1: which bakers can identify spices?</h2>
+<p>Thanks to <a href="https://bsky.app/profile/apreshill.com">Alison Hill</a> for sharing this example. This data is from a Great British Bakeoff challenge; I assume that bakers were tested on their ability to identify different spices.</p>
+<p>The dataframe on the left is in wide format; the performance of each baker in each spice test is listed across different columns.</p>
+<p><img src="../courses/img/pivot_longer_data.png" class="img-fluid"> Image credit: <a href="https://bsky.app/profile/apreshill.com">Alison Hill</a></p>
+<p>The dataframe on the right is in long format; all of the accuracy scores are in a single column and information about which baker and spice test each observation came from are represented in separate variables.</p>
+<section id="using-pivot_longer-wide-to-long" class="level3">
+<h3 class="anchored" data-anchor-id="using-pivot_longer-wide-to-long">Using <code>pivot_longer</code> (wide to long)</h3>
+<p>The <code>pivot_longer</code> function will change your wide data to long format in a single line of code.</p>
+<p>You need to tell it …</p>
+<ul>
+<li>data = dataframe you want to pivot</li>
+<li>names_to = name of column you want to create to capture condition (i.e.&nbsp;spice)</li>
+<li>values_to = name of column you want to contain data values (i.e.&nbsp;correct)</li>
+<li>column X:column Y = range of columns that you have and want to pivot_longer (cinnamon_1:nutmeg_3)</li>
+</ul>
+<p><img src="../courses/img/longer_arguments.png" class="img-fluid"> Image credit: <a href="https://bsky.app/profile/apreshill.com">Alison Hill</a></p>
+</section>
+<section id="using-pivot_wider-long-to-wide" class="level3">
+<h3 class="anchored" data-anchor-id="using-pivot_wider-long-to-wide">Using <code>pivot_wider</code> (long to wide)</h3>
+<p>The <code>pivot_wider</code> function will change your long data to wide format in a single line of code.</p>
+<p>You need to tell it …</p>
+<ul>
+<li>data = dataframe you want to pivot</li>
+<li>names_from = name of column you want to end up in several columns</li>
+<li>values_from = name of column that currently contains data values</li>
+</ul>
+<p><img src="../courses/img/wider_arguments.png" class="img-fluid"> Image credit: <a href="https://bsky.app/profile/apreshill.com">Alison Hill</a></p>
+</section>
+<section id="your-turn" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn">Your turn</h3>
+<p>Here is a link to the <a href="https://github.com/jenrichmond/RLadiesSydney-blogdown/blob/master/csv/bakers_wide.csv">bakers data in wide format</a>.</p>
+<ul>
+<li>download the <a href="https://github.com/jenrichmond/RLadiesSydney-blogdown/blob/master/csv/bakers_wide.csv">data</a> and put it in your data folder</li>
+<li>open a new script</li>
+<li>load the tidyverse and here packages</li>
+<li>use <code>here</code> and <code>read_csv</code> to read the bakers data (go back to Basic Basics if you’ve forgotten how this works)</li>
+<li>use <code>pivot_longer</code> to convert the bakers data from wide to long, replicating Alison’s steps above.</li>
+</ul>
+</section>
+</section>
+<section id="example-2-long-beaches-are-better-than-wide" class="level2">
+<h2 class="anchored" data-anchor-id="example-2-long-beaches-are-better-than-wide">Example 2: long beaches are better than wide</h2>
+<p>The raw sydneybeaches data is helpfully already in long format, but I have created a couple of summary datasets so we can practice changing data from wide to long and back again.</p>
+<p>In the wide format, I’ve averaged bug levels for each year and the beach sites appear in separate columns.</p>
+<p><img src="../courses/img/8_wide_beaches.png" class="img-fluid"></p>
+<p>In long format, the bug levels from each site are all in a single column and year and site are represented as separate variables.</p>
+<p><img src="../courses/img/7_long_beaches.png" class="img-fluid"></p>
+<section id="your-turn-1" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-1">Your turn</h3>
+<p>Here is a link to the <a href="https://github.com/jenrichmond/RLadiesSydney-blogdown/blob/master/csv/beachbugs_wide.csv">beaches summary in wide format</a></p>
+<ul>
+<li>download the <a href="(https://github.com/jenrichmond/RLadiesSydney-blogdown/blob/master/csv/beachbugs_wide.csv)">data</a> and put it in your data folder</li>
+<li>open a new script</li>
+<li>load library tidyverse</li>
+<li>use <code>here</code> and <code>read_csv</code> to read the beaches data (go back to Basic Basics if you’ve forgotten how this works)</li>
+<li>use <code>pivot_longer</code> to convert the beaches data from wide to long</li>
+</ul>
+<p>In this screencast, I walk you through how to use <code>pivot_longer</code> to make the wide beaches data long.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vu_ePf3sA1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+<p>In this one, learn how to use <code>pivot_wider</code> to make long beaches data wide.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vcy_S1HIG7c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+</section>
+<section id="example-3-a-tricky-one" class="level2">
+<h2 class="anchored" data-anchor-id="example-3-a-tricky-one">Example 3: A tricky one</h2>
+<p>The bakers data and beaches data are relatively simple. What happens if there is more that one condition that you are trying to pivot across?</p>
+<p>This sampling frames dataset comes from an experiment from <a href="https://twitter.com/djnavarro">Danielle Navarro’s</a> lab. In this study, each participant made reasoning judgements about items either based on a category or property (condition). They made repeated judgements after being given a small, medium, and large “samples” of information. For each of these sampling conditions, there were 7 different items that participants made a judgement about.</p>
+<p>Here is what the data looks like in wide format.</p>
+<p><img src="../courses/img/frames_wide.png" class="img-fluid"></p>
+<p>Each row contains all of the data from a single participant and the column represent information about BOTH sampling condition (small, medium, large) and item (1-7).</p>
+<section id="your-turn-2" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-2">Your turn</h3>
+<p>Here is a link to the <a href="https://github.com/jenrichmond/RLadiesSydney-blogdown/blob/master/csv/frames_wide.csv">frames data in wide format</a>.</p>
+<ul>
+<li>download the <a href="https://github.com/jenrichmond/RLadiesSydney-blogdown/blob/master/csv/frames_wide.csv">data</a> and put it in your data folder</li>
+<li>open a new script</li>
+<li>load the tidyverse and here packages</li>
+<li>use <code>here</code> and <code>read_csv</code> to read the frames data (go back to <a href="../01-BasicBasics-3/">Basic Basics</a> if you’ve forgotten how this works)</li>
+<li>use <code>pivot_longer</code> to convert the frames data from wide to long</li>
+</ul>
+</section>
+</section>
+<section id="how-did-you-go" class="level2">
+<h2 class="anchored" data-anchor-id="how-did-you-go">How did you go?</h2>
+<p>Hopefully you ended up with a data frame that looks something like this.</p>
+<p><img src="../courses/img/frames_final.png" class="img-fluid"></p>
+<p>If not, check out how you can add an extra argument to pivot_longer() and accomplish this pivot in a single step.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GhVweI0MRUg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+<section id="your-turn-try-your-own-data" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-try-your-own-data">Your turn: Try your own data</h3>
+<p>Is your data in wide format? No problem. Sort out answers to the following questions and you can convert it to long format with a single line of code.</p>
+<ol type="1">
+<li>What do you want your “names” column to be called?</li>
+<li>What are the “values”?</li>
+<li>Which columns do you want to pivot?</li>
+</ol>
+</section>
+<section id="looking-for-more" class="level3">
+<h3 class="anchored" data-anchor-id="looking-for-more">Looking for more?</h3>
+<p>Some additional links that might be helpful!</p>
+<ul>
+<li><a href="https://github.com/gadenbuie/tidyexplain#tidy-data">What is tidy data?</a></li>
+<li><a href="https://fromthebottomoftheheap.net/2019/10/25/pivoting-tidily/">Pivoting tidily</a></li>
+<li><a href="https://tidyr.tidyverse.org/">TidyR docs</a></li>
+<li><a href="https://thatdatatho.com/2020/03/28/tidyrs-pivot_longer-and-pivot_wider-examples-tidytuesday-challenge/">TidyTuesday pivot examples</a></li>
+</ul>
+<p>Now that your data is in long format- you are ready for <a href="../courses/03-VizWhiz-0.html">VizWhiz</a>!</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

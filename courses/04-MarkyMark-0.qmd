@@ -1,0 +1,32 @@
+# Unit 4: MarkyMark {#sec-markymark}
+
+## Overview
+
+![](/courses/img/markymark-banner.jpg)
+
+Welcome to the fourth unit of [RYouWithMe](../)! In Unit 4, we’re tackling the one and only R Markdown!
+
+::: callout-warning
+Since we wrote RYouWithMe, RStudio has launched a new reporting tool called Quarto. It has all the same functionality as RMarkdown as well as extra formatting flexibility (hello callout boxes) and features that make it useful if you work in programming languages other than R.
+
+RMarkdown isn't going anywhere and once you know how an .rmd file works, the transition to working with a .qmd file is pretty easy... but if you are keen to learn about Quarto check out [the documentation here](https://quarto.org/).
+:::
+
+## Lessons
+
+Unit 4 has four lessons:
+
+1.  [Formatting in R Markdown](04-MarkyMark-1.qmd)
+2.  [Code Chunks in R Markdown](04-MarkyMark-2.qmd)
+3.  [Exporting from R Markdown](04-MarkyMark-3.qmd)
+4.  [R Markdown Templates](04-MarkyMark-4.qmd)
+
+This unit overview wouldn't be complete without a gif of our naming inspo. We think this will be precisely his reaction when he finds out that an #rstats unit is named after him!
+
+::: {.tenor-gif-embed data-postid="5888856787783968247" data-share-method="host" data-aspect-ratio="0.531401" data-width="30%"}
+<a href="https://tenor.com/view/marky-mark-wahlberg-calvin-klien-model-gif-5888856787783968247">Marky Wahlberg GIF</a>from <a href="https://tenor.com/search/marky-gifs">Marky GIFs</a>
+:::
+
+```{=html}
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+```

@@ -1,0 +1,11 @@
+---
+title: "Welcome to the R-Ladies Sydney website"
+---
+
+This site provides a resource for the Sydney chapter so that anyone giving a talk, presenting a tutorial, or just wanting to share something awesome can contribute. It’s also where we archive information about our past [events](events.qmd) and links to the associated resources. The goal in putting this together is for everyone in the Sydney R-Ladies community to support each other, and to allow all members (whether they can make it to meetups or not) to feel part of and get something from the group. You can find out more about us - and how to contact us - on the [about](about.qmd) page, check out upcoming meetings on the [meetup](https://www.meetup.com/en-AU/rladies-sydney/) page, or browse the occasional blog [post](posts.qmd) written by the Sydney R-Ladies. Don't forget to follow us on BlueSky!
+
+If you are a total R newbie- welcome!!
+
+You might like to check out our #RYouWithMe course in the left sidebar. These modules were designed by beginners, for beginners and have videos that walk you through installing R and RStudio, getting your data in, cleaning it up a bit, making sweet visualisations and making beautiful (and reproducible) reports using RMarkdown. Enjoy!
+
+![](img/purple_sails.png){fig-align="right"}

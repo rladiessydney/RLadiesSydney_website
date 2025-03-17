@@ -1,0 +1,42 @@
+# R Markdown Templates
+
+Producing reports is only the beginning when it comes to the utility of R Markdown. In this lesson we will walk through how to use R Markdown templates to produce ALL THE THINGS!
+
+## Lesson Outcomes
+
+By the end of the lesson, you should be able to:
+
+-   use R Markdown templates to create formatted documents
+
+## How to use R Markdown templates
+
+In this screencast, we’ll cover:
+
+-   How to use the R Markdown template menu to knit all kinds of documents
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sMpOdte1sYA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+Watch the video and then fill your template list with options by installing some of R Markdown-based packages.
+
+## Fun R Markdown packages to try
+
+-   `blogdown`
+-   `radix`
+-   `pagedown`
+-   `bookdown`
+-   `thesisdown`
+-   `rticles`
+-   `vitae`
+-   `papaja`
+-   `flexdashboard`
+-   `learnr`
+-   `tufte`
+-   `remedy`
+-   `namer`\
+-   `xarigan`
+
+## Find more!
+
+Find more tips and tricks that we learned at our RMarkdownThrowdown event at the event [github repository](https://github.com/jenrichmond/RMarkdownThrowdown)!

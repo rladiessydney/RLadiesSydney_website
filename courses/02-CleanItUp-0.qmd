@@ -1,0 +1,25 @@
+# Unit 2: Clean it up {#sec-ciu-0}
+
+## Overview
+
+Welcome to the second unit of [RYouWithMe](../)! In Unit 2, we’re moving on to data cleaning! Trust us, it's more fun than housecleaning!
+
+![](/courses/img/clean-it-up-banner.jpg)
+
+## Lessons
+
+Unit 2 has four lessons:
+
+1.  [Dealing with Columns](02-CleanItUp-1.qmd)
+2.  [Exploring the Rows](02-CleanItUp-2.qmd)
+3.  [Making New Variables](02-CleanItUp-3.qmd)
+4.  [Wide to Long to Wide to...PIVOT](02-CleanItUp-5.qmd)
+
+<iframe src="https://giphy.com/embed/z5fNH8BMbeDN6" width="480" height="374" frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+<p><a href="https://giphy.com/gifs/notes-z5fNH8BMbeDN6">via GIPHY</a></p>
+
+
+First, [dealing with columns](02-CleanItUp-1.qmd)

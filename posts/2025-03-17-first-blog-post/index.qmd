@@ -1,0 +1,18 @@
+---
+title: "first blog post"
+description: "you could write this blog post"
+author:
+  - name: Your name
+    url: Your website
+    orcid: Your orcid
+    affiliation: Your affilication
+    affiliation-url: Affiliation URL
+date: 03-17-2025
+categories: [Quarto, R, R-Ladies] # self-defined categories
+image: preview-image.png
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+Your blog content could go here!!
+
+Check out [this post](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/) by Samantha Csik for details re how/why you might want to blog using Quarto.
