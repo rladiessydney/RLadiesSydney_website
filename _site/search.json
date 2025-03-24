@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
+    "objectID": "posts.html",
+    "href": "posts.html",
     "title": "Blog",
     "section": "",
-    "text": "Coming soon…\nWould you like to write a blog post for us? Maybe about an event you attended or something you have learned recently? Get in touch with us at sydney@rladies.org."
+    "text": "Coming soon…\nWould you like to write a blog post for us? Maybe about an event you attended or something you have learned recently? Get in touch with us at sydney@rladies.org.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfirst blog post\n\n\n\nQuarto\n\n\nR\n\n\nR-Ladies\n\n\n\nyou could write this blog post\n\n\n\nYour name\n\n\nMar 17, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "courses/01-BasicBasics-0.html",
@@ -13,7 +13,6 @@
     "section": "",
     "text": "Welcome to the first unit of RYouWithMe! In this first unit, you’ll lay down the foundational knowledge and skills that will carry you through your R journey! Since it covers the basics of R in a hopefully straightforward way, we’re calling it Basic Basics…\n\n\n\nbasic basics banner\n\n\n\n\n\nThis unit has three lessons:\n\nAn opinionated tour of RStudio\nInstalling and loading packages\nGetting data into RStudio\n\nClick on any of the links above (or use the navigation arrows below) to see the lessons. As you embark on Basic Basics, we think this is a useful reminder for R users new and experienced (h/t realpython):\n\n\n\nlearning programming is like climbing a mountain\n\n\nLearning R is a journey - we’re delighted to have you along!\nLet’s get started",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics"
     ]
@@ -25,7 +24,6 @@
     "section": "",
     "text": "Welcome to the first unit of RYouWithMe! In this first unit, you’ll lay down the foundational knowledge and skills that will carry you through your R journey! Since it covers the basics of R in a hopefully straightforward way, we’re calling it Basic Basics…\n\n\n\nbasic basics banner",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics"
     ]
@@ -37,7 +35,6 @@
     "section": "",
     "text": "This unit has three lessons:\n\nAn opinionated tour of RStudio\nInstalling and loading packages\nGetting data into RStudio\n\nClick on any of the links above (or use the navigation arrows below) to see the lessons. As you embark on Basic Basics, we think this is a useful reminder for R users new and experienced (h/t realpython):\n\n\n\nlearning programming is like climbing a mountain\n\n\nLearning R is a journey - we’re delighted to have you along!\nLet’s get started",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics"
     ]
@@ -49,7 +46,6 @@
     "section": "",
     "text": "In this, the third lesson to Basic Basics, we’re going to review how to get data into RStudio, using a specially selected data file that we’ll continue to use for many of the RYouWithMe lessons.\n\n\nBy the end of the lesson, you should:\n\nHave the sydneybeaches.csv data file saved to your RYouWithMe data folder\nKnow how to use the here package to tell R where your data is, how to use read_csv to read data from a .csv file, and how to use summary functions to explore your data\nHave an idea of where to go to learn more about reading different kinds of data into R\n\n\n\n\nWe’ll be using this dataset for many of the remaining RYouWithMe lessons. Not only is it locally relevant for R-Ladies Sydney, it’s also fascinating! This dataset is compiled by the NSW Office of Environment and Heritage contains the enterococci counts in water samples obtained from – you guessed it – Sydney beaches as part of the Beachwatch Water Quality Program! The dataset we’ll be working with is current as of October 13th 2018.\nWhat’s enterococci, you ask? Whether you really want to know the answer depends on if you want to feel comfortable swimming in the Sydney region ever again…\nFrom the Program (emphasis added):\n\nEnterococci is found in the intestines of warm blooded animals and excreted in faeces and rarely present in unpolluted waters. The bacteria is found in very high numbers in raw sewage which makes it a good indicator of sewage pollution. Studies have shown a strong relationship between elevated levels of enterococci and illness rates in swimmers. It’s important to note that enterococci doesn’t cause illness, but its presence means there’s sewage in the water and, therefore, possibly pathogens, which do cause illness.\nIndicator organisms are used to test for sewage pollution because: - they are easily detectable by simple laboratory tests - they are generally not present in unpolluted waters - results are available relatively quickly. The National health and Medical Research Council (2008) Guidelines for Managing Risks in Recreational Waters recommend enterococci as the single preferred indicator organism for the detection of faecal pollution.\n\nCheck out this picture of enterococci wearing R-Ladies purple!\n\nOk - back to the lesson…\n\n\n\nOkay, if we’re going to discuss how to import data into R, then the first thing we’ll need to do is have a data set! For this lesson we’ll make it as painless as possible… click on this link, which will take you to the raw sydneybeaches data on github, then right click and save the data as a .csv file. Put the .csv file in your data folder inside your RYouWithMe folder.\n\n\n\n\n\n\nTip\n\n\n\nRYouWithMe now has a data package! Check out this update video where Jen walks though how to read the sydneybeaches data from a saved .csv file, a github URL, and from the ryouwithme package directly.\n\n\n\n\n\nIn this screencast, we’ll review:\n\nHow to read in the beaches into R using read_csv and the here package\nHow to get a feel for the data using View, dim, str, head, tail, and summary\nHow to get simple summary stats using the skimr package\n\n \n\n\n\nWatch the video and then carry out the following steps:\n\nLoad the tidyverse and here packages at the top of your script [you should have these there from Lesson 2!]\nRead the beaches data into R\n\npractice reading from a csv, a github URL AND installing the RYouWithMe package (see NEW video here)\n\nPlay around with the summary functions\n\nThen have a go with your own data!\nTry putting a datafile that you might need to work with in R in a subfolder of your data folder and use the here package to read the data into R.\nWhat kind of assumptions does R make about the kind of data in each of your columns?\nExample. Here I have made a subfolder called myowndata within my data folder and put a .csv file in it.\n\nTo read it in using the here package, just tell R that the data lives in a subfolder.\nkidEMG &lt;- read_csv(here(\"data\", \"myowndata\", \"JustkidCleanEMG.csv\")\n\n\n\nBut what if my data isn’t in .csv format??\nNo problem, there is a package for that! R can read in data from almost anywhere and any format. For example, you can learn more about reading data from…\n\nExcel files: install.packages(\"readxl\") vignette\nSPSS/Stata/SAS files: install.packages(\"haven\") vignette\nGoogle sheets: install.packages(\"googlesheets4\") vignette\nCopy and paste using datapasta: install.packages(\"datapasta\") vignette\n\n… but R has tools for working with a very wide range of possible data formats and so there are packages out there for all sorts of things.\nThat’s it for Basic Basics.\nAre you ready to get your data cleaned up a bit? Check out CleanItUp next.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 3"
@@ -62,7 +58,6 @@
     "section": "",
     "text": "By the end of the lesson, you should:\n\nHave the sydneybeaches.csv data file saved to your RYouWithMe data folder\nKnow how to use the here package to tell R where your data is, how to use read_csv to read data from a .csv file, and how to use summary functions to explore your data\nHave an idea of where to go to learn more about reading different kinds of data into R",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 3"
@@ -75,7 +70,6 @@
     "section": "",
     "text": "We’ll be using this dataset for many of the remaining RYouWithMe lessons. Not only is it locally relevant for R-Ladies Sydney, it’s also fascinating! This dataset is compiled by the NSW Office of Environment and Heritage contains the enterococci counts in water samples obtained from – you guessed it – Sydney beaches as part of the Beachwatch Water Quality Program! The dataset we’ll be working with is current as of October 13th 2018.\nWhat’s enterococci, you ask? Whether you really want to know the answer depends on if you want to feel comfortable swimming in the Sydney region ever again…\nFrom the Program (emphasis added):\n\nEnterococci is found in the intestines of warm blooded animals and excreted in faeces and rarely present in unpolluted waters. The bacteria is found in very high numbers in raw sewage which makes it a good indicator of sewage pollution. Studies have shown a strong relationship between elevated levels of enterococci and illness rates in swimmers. It’s important to note that enterococci doesn’t cause illness, but its presence means there’s sewage in the water and, therefore, possibly pathogens, which do cause illness.\nIndicator organisms are used to test for sewage pollution because: - they are easily detectable by simple laboratory tests - they are generally not present in unpolluted waters - results are available relatively quickly. The National health and Medical Research Council (2008) Guidelines for Managing Risks in Recreational Waters recommend enterococci as the single preferred indicator organism for the detection of faecal pollution.\n\nCheck out this picture of enterococci wearing R-Ladies purple!\n\nOk - back to the lesson…",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 3"
@@ -88,7 +82,6 @@
     "section": "",
     "text": "Okay, if we’re going to discuss how to import data into R, then the first thing we’ll need to do is have a data set! For this lesson we’ll make it as painless as possible… click on this link, which will take you to the raw sydneybeaches data on github, then right click and save the data as a .csv file. Put the .csv file in your data folder inside your RYouWithMe folder.\n\n\n\n\n\n\nTip\n\n\n\nRYouWithMe now has a data package! Check out this update video where Jen walks though how to read the sydneybeaches data from a saved .csv file, a github URL, and from the ryouwithme package directly.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 3"
@@ -101,7 +94,6 @@
     "section": "",
     "text": "In this screencast, we’ll review:\n\nHow to read in the beaches into R using read_csv and the here package\nHow to get a feel for the data using View, dim, str, head, tail, and summary\nHow to get simple summary stats using the skimr package",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 3"
@@ -114,7 +106,6 @@
     "section": "",
     "text": "Watch the video and then carry out the following steps:\n\nLoad the tidyverse and here packages at the top of your script [you should have these there from Lesson 2!]\nRead the beaches data into R\n\npractice reading from a csv, a github URL AND installing the RYouWithMe package (see NEW video here)\n\nPlay around with the summary functions\n\nThen have a go with your own data!\nTry putting a datafile that you might need to work with in R in a subfolder of your data folder and use the here package to read the data into R.\nWhat kind of assumptions does R make about the kind of data in each of your columns?\nExample. Here I have made a subfolder called myowndata within my data folder and put a .csv file in it.\n\nTo read it in using the here package, just tell R that the data lives in a subfolder.\nkidEMG &lt;- read_csv(here(\"data\", \"myowndata\", \"JustkidCleanEMG.csv\")",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 3"
@@ -127,7 +118,6 @@
     "section": "",
     "text": "But what if my data isn’t in .csv format??\nNo problem, there is a package for that! R can read in data from almost anywhere and any format. For example, you can learn more about reading data from…\n\nExcel files: install.packages(\"readxl\") vignette\nSPSS/Stata/SAS files: install.packages(\"haven\") vignette\nGoogle sheets: install.packages(\"googlesheets4\") vignette\nCopy and paste using datapasta: install.packages(\"datapasta\") vignette\n\n… but R has tools for working with a very wide range of possible data formats and so there are packages out there for all sorts of things.\nThat’s it for Basic Basics.\nAre you ready to get your data cleaned up a bit? Check out CleanItUp next.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 3"
@@ -140,7 +130,6 @@
     "section": "",
     "text": "I google for #rstats code all the time! https://t.co/XDzuvqkJCK\n\n— Hadley Wickham (@hadleywickham) July 26, 2016\n\n\n\nEveryone (even Hadley Wickham!) googles how to make their ggplot look like how they want, every…. single…. time. In this lesson, we are going to show you how to use themes, colours, and labels to get most of the way there.\n\n\nBy the end of the lesson, you should be able to :\n\nuse ggplot themes to change most of the things you don’t like about your plots\nchange the colour of points on your plot manually and using palettes\nadd labels to your plot to ensure that it is clear to the view what you are plotting\n\n\n\n\nThe default plots in ggplot come with a grey background and gridlines, but you can add a “theme” as another layer to your plot to deal with a lot of the format setting issues automatically.\nWant to get rid of the grey background? Try + theme_bw()\nWant old-school solid black x and y axes with no gridlines? Give theme_classic() a go\nIn this screencast, we’ll review:\n\nhow to add a theme to a single plot\nhow to change the default at the top of your script so that all of your plots have the same theme\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nadd a theme layer to the rainfall/temperature plot\ntry a few different themes and work out which one you like the best\nadd a theme_set call at the beginning of your script and then run the whole script to see what the all of the figures look like with the new theme\n\nHelpful hint: For more information about using ggplot themes, check out the documentation here.\n\n\n\n\nIn our rainfall/temperature plot, the default colour scheme for differentiating temperature is blue on blue on blue. It would be great if we could make hot days display as red points and cool days as blue points. Let’s learn how to do that.\nIn this screencast, we’ll review:\n\nhow to add change the colour of the points using scale_colour_gradient\nhow to add change the colour of the points using palettes from the RColorBrewer package\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nChange the colour of your points to make cool values blue and hot values red using scale_colour_gradient\nInstall the RColorBrewer package and call display.brewer.all to pull up all the palette options\nChoose your favourite brewer palette and use it to change the colour of the points with scale_colour_distiller\n\n\n\n\nWhen using colour palettes, the scale_colour_distiller function works well for continuous data, when you want a gradient of colour from low to high values. When using colour palettes to change the colour of bars (i.e., you want discrete colours) you want to use scale_colour_brewer() instead. See more info about the RColorBrewer package here.\nThe palettes in the RColorBrewer package are only a drop in the bucket of colour options. Emil Hvitfeldt keeps a comprehensive list of colour palette packages on his github here or your might like to try the color palette finder tool on the R Graph gallery. If you like birds, you might try these bird inspired options.\n\nAustralian birdsfeathers\nNew Zealand birdsmanu\nCentral/South American songbirdstanagR\n\n\n\n\n\nWhen making data visualisations it is also really important that your audience can quickly disgest what they are looking at; labels are key.\nIn this screencast, we’ll review:\n\nhow to use the labs layer in ggplot to add a title, subtitle, and caption to your plot\nhow to change the x and y axis labels\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nAdd a title and subtitle\nAdd a caption that reflects where the data came from\nChange the x and y axes so that they more accurately capture what is plotted\n\nP.S. I googled it and worked out how to make the title wrap over the line. Just put \"\\n\" into the title where you want it to wrap.\nlike this…\nlabs(title = \"Mean enterococci bacteria levels at Eastern Suburbs \\n beaches as a function of rainfall and temperature\")\nP.P.S. I also worked out how to change the label on the legend, just add \"name =\" to the scale_colour_distiller call, like this…\nscale_colour_distiller(name = \"Temp (C)\", palette = \"RdYlBu\")\nPick your favourite figure from your own work and try to replicate it in R. Don’t forget that EVERYONE googles how to do EVERYTHING. Also make sure to add ggsave to share your plots on your favourite social media platform.\nNext up, a bonus lesson - adding GIFs to plots!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 4"
@@ -153,7 +142,6 @@
     "section": "",
     "text": "By the end of the lesson, you should be able to :\n\nuse ggplot themes to change most of the things you don’t like about your plots\nchange the colour of points on your plot manually and using palettes\nadd labels to your plot to ensure that it is clear to the view what you are plotting",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 4"
@@ -166,7 +154,6 @@
     "section": "",
     "text": "The default plots in ggplot come with a grey background and gridlines, but you can add a “theme” as another layer to your plot to deal with a lot of the format setting issues automatically.\nWant to get rid of the grey background? Try + theme_bw()\nWant old-school solid black x and y axes with no gridlines? Give theme_classic() a go\nIn this screencast, we’ll review:\n\nhow to add a theme to a single plot\nhow to change the default at the top of your script so that all of your plots have the same theme\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nadd a theme layer to the rainfall/temperature plot\ntry a few different themes and work out which one you like the best\nadd a theme_set call at the beginning of your script and then run the whole script to see what the all of the figures look like with the new theme\n\nHelpful hint: For more information about using ggplot themes, check out the documentation here.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 4"
@@ -179,7 +166,6 @@
     "section": "",
     "text": "In our rainfall/temperature plot, the default colour scheme for differentiating temperature is blue on blue on blue. It would be great if we could make hot days display as red points and cool days as blue points. Let’s learn how to do that.\nIn this screencast, we’ll review:\n\nhow to add change the colour of the points using scale_colour_gradient\nhow to add change the colour of the points using palettes from the RColorBrewer package\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nChange the colour of your points to make cool values blue and hot values red using scale_colour_gradient\nInstall the RColorBrewer package and call display.brewer.all to pull up all the palette options\nChoose your favourite brewer palette and use it to change the colour of the points with scale_colour_distiller\n\n\n\n\nWhen using colour palettes, the scale_colour_distiller function works well for continuous data, when you want a gradient of colour from low to high values. When using colour palettes to change the colour of bars (i.e., you want discrete colours) you want to use scale_colour_brewer() instead. See more info about the RColorBrewer package here.\nThe palettes in the RColorBrewer package are only a drop in the bucket of colour options. Emil Hvitfeldt keeps a comprehensive list of colour palette packages on his github here or your might like to try the color palette finder tool on the R Graph gallery. If you like birds, you might try these bird inspired options.\n\nAustralian birdsfeathers\nNew Zealand birdsmanu\nCentral/South American songbirdstanagR",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 4"
@@ -192,7 +178,6 @@
     "section": "",
     "text": "When making data visualisations it is also really important that your audience can quickly disgest what they are looking at; labels are key.\nIn this screencast, we’ll review:\n\nhow to use the labs layer in ggplot to add a title, subtitle, and caption to your plot\nhow to change the x and y axis labels\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nAdd a title and subtitle\nAdd a caption that reflects where the data came from\nChange the x and y axes so that they more accurately capture what is plotted\n\nP.S. I googled it and worked out how to make the title wrap over the line. Just put \"\\n\" into the title where you want it to wrap.\nlike this…\nlabs(title = \"Mean enterococci bacteria levels at Eastern Suburbs \\n beaches as a function of rainfall and temperature\")\nP.P.S. I also worked out how to change the label on the legend, just add \"name =\" to the scale_colour_distiller call, like this…\nscale_colour_distiller(name = \"Temp (C)\", palette = \"RdYlBu\")\nPick your favourite figure from your own work and try to replicate it in R. Don’t forget that EVERYONE googles how to do EVERYTHING. Also make sure to add ggsave to share your plots on your favourite social media platform.\nNext up, a bonus lesson - adding GIFs to plots!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 4"
@@ -205,7 +190,6 @@
     "section": "",
     "text": "This bonus VizW(h)iz lesson is a shout-out to R-Ladies Sydney cofounder Lisa Williams. Back in May, she tweeted:\n\n\n\nI vote for this as a tutorial at an upcoming @RLadiesSydney meetup! @djnavarro @JenRichmondPhD @StephdeSilva! https://t.co/bBQ4HmbCYW\n\n— Dr Lisa A. Williams (@williamslisaphd) May 16, 2018\n\n\n\nYour wish is our command, Lisa! [pun intended!]\n\n\n\nI could not possibly love this more! pic.twitter.com/lQyQlRNVZl\n\n— Dr Lisa A. Williams (@williamslisaphd) December 18, 2018\n\n\n\n\nWe are quite certain that you’d appreciate knowing how to perform this whizzy wizardry, so here you are: a step-by-step guide to adding a gif to a ggplot!\n\n\n\nInstall the magick package and load it with ggplot. While you’re at it, install the beepr package (you’ll appreciate this at Step 5!).\n\n\nlibrary(ggplot)\nlibrary(magick)\nlibrary(beepr)\n\n\nPlot your graph and use ggsave to save it as a .png file.\n\n\nraintemp %&gt;%\n    na.omit() %&gt;%\n    filter(beachbugs &gt; 500) %&gt;%\n    ggplot(aes(x = rain_mm, y = beachbugs, color = temp_airport)) +\n    geom_point() +\n    geom_smooth() +\n    theme_classic() +\n    scale_colour_distiller(name = \"Temp (C)\", palette = \"RdYlBu\") +\n    labs(title = \"Mean enterococci bacteria levels at Eastern Suburbs \\nbeaches as a function of rainfall and temperature\", \n         subtitle = \"only day &gt; 500\", \n         caption = \"data from https://www.environment.nsw.gov.au/beachapp/report_enterococci.aspx\", \n         x = \"Rainfall (mm)\", \n         y = \"Mean enterococci levels\")\n    \nggsave(\"beaches.png\")\n\n\nFind a gif you like and save it as a .gif file. Read the image files into Rstudio.\n\n\nbeachplot &lt;- image_read(\"beaches.png\")\nwizgif &lt;- image_read(\"ladywiz.gif\")\n\n\nMake a composite image that puts the beach plot and wiz gif together. Use the offset to move the gif.\n\n\nframes &lt;- image_composite(beachplot, wizgif, offset = \"+600+200\")\n\n\nAnimate the frames and write to a new gif. It will take ages, so you might like to install the beepr package and add a beep to alert you when it is done. The default sounds is a “ping” but if you like mario, try beep(sound = 8).\n\n\nanimation &lt;- image_animate(frames, fps = 10)\nimage_write(animation, \"beachwiz.gif\")\n\nbeep()\n\nVoilà!\nGIF-enhanced ggplot!\nNext up- MarkyMark",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 5"
@@ -218,7 +202,6 @@
     "section": "",
     "text": "Install the magick package and load it with ggplot. While you’re at it, install the beepr package (you’ll appreciate this at Step 5!).\n\n\nlibrary(ggplot)\nlibrary(magick)\nlibrary(beepr)\n\n\nPlot your graph and use ggsave to save it as a .png file.\n\n\nraintemp %&gt;%\n    na.omit() %&gt;%\n    filter(beachbugs &gt; 500) %&gt;%\n    ggplot(aes(x = rain_mm, y = beachbugs, color = temp_airport)) +\n    geom_point() +\n    geom_smooth() +\n    theme_classic() +\n    scale_colour_distiller(name = \"Temp (C)\", palette = \"RdYlBu\") +\n    labs(title = \"Mean enterococci bacteria levels at Eastern Suburbs \\nbeaches as a function of rainfall and temperature\", \n         subtitle = \"only day &gt; 500\", \n         caption = \"data from https://www.environment.nsw.gov.au/beachapp/report_enterococci.aspx\", \n         x = \"Rainfall (mm)\", \n         y = \"Mean enterococci levels\")\n    \nggsave(\"beaches.png\")\n\n\nFind a gif you like and save it as a .gif file. Read the image files into Rstudio.\n\n\nbeachplot &lt;- image_read(\"beaches.png\")\nwizgif &lt;- image_read(\"ladywiz.gif\")\n\n\nMake a composite image that puts the beach plot and wiz gif together. Use the offset to move the gif.\n\n\nframes &lt;- image_composite(beachplot, wizgif, offset = \"+600+200\")\n\n\nAnimate the frames and write to a new gif. It will take ages, so you might like to install the beepr package and add a beep to alert you when it is done. The default sounds is a “ping” but if you like mario, try beep(sound = 8).\n\n\nanimation &lt;- image_animate(frames, fps = 10)\nimage_write(animation, \"beachwiz.gif\")\n\nbeep()\n\nVoilà!\nGIF-enhanced ggplot!\nNext up- MarkyMark",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 5"
@@ -231,7 +214,6 @@
     "section": "",
     "text": "The ggplot fanciness we covered in Lesson 1 and Lesson 2 is great, but sometimes your boss/grant agency/publication outlet insists on a bar or column graph. Or perhaps you simply need to visualise two continuous variables. In this lesson, we will show you how to plot bar and column graphs with error bars and how to plot a scatter plot.\n\n\nBy the end of the lesson, you should be able to :\n\nuse geom_bar and geom_col to plot frequency vs. summary data\nuse summarise to calculate standard error and geom_errorbar to add error bars to a plot\nuse geom_point to create a scatter plot of two continuous variables\n\n\n\n\nThere are two geoms in ggplot that draw bar plots, geom_barand geom_col.\nWhen you want to plot frequency/count data and are happy to let R to do the counting autoamtically, use geom_bar. It only requires that you tell it what you want on the x axis, and it will put frequency on the y axis.\nIf you want the height of the bar to represent a value you have calculated, then use geom_col. For this geom, you need to tell it what you want for both the x axis and the y axis.\nIn this screencast, we’ll review:\n\nHow to use geom_bar to plot count/frequency data\nHow to combine summarise and geom_col to plot mean bug levels by year\nHow to group_by more than one variable and use facet_wrap to plot mean bug levels by year, separately for each site\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse geom_bar and facet_wrap to plot the number of readings that were taken each year, separately for each site\nUse group_by and summarise with geom_col to plot the mean beach bug levels averaged across all the sites each year\nUse group_by and summarise with geom_col to plot the mean beach bug levels each year, using facet_wrap to plot each site separately\n\n\n\n\n\nOf course, good practice dictates that you need error bars on those columns. Never fear! Using summarise, it is easy to calculate standard error.\nIn this screencast, we’ll review:\n\nHow to use summarise to calculate the mean, standard deviation and standard error\nHow to add a geom_errorbar layer to your plot to display the mean beach bugs data in a column graph with error bars\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse group_by and summarise to calculate the mean, standard deviation, N, and standard error for each site\nPipe that summarise into a geom_col adding a coorid_flip and geom_errorbar layer\n\n\n\n\n\nSometimes you want to visualise the relationship between two continuous variables using a scatterplot. Our original beachbugs dataset doesn’t include any interesting variables that might be correlated with the bacteria levels, so we have pulled in some weather data to see whether bacteria levels might be related to rainfall or temperature, or some combination of the two.\nYou can download the rain_temp_beachbugs.csv data here\n\nDon’t forget that #RYouWithMe has a data package and that you can use it to get the rain_temp_bugs data\n\nIn this screencast, we’ll review:\n\nHow to import the rain_temp_beachbugs.csv dataset into R\nHow to use geom_point and geom_smooth to plot a scatter plot and best fit line\nHow to use point color to illustrate potential interactions in your data\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nuse read_csv and here to read the rain_temp data into RStudio (need help? revisit Unit 1 Basic Basics Lesson 3: Loading Data\nuse geom_point to plot the relation between rainfall and beach bugs\nfilter the data for values more than 500 and add a geom_smooth layer to see a regression line\ncolour the points by the temperature variable\n\nNow that you’ve got the structural components of several of the most popular plots down, it’s time to learn how to customise the appearance of those plots! Onward to Lesson 4.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 3"
@@ -244,7 +226,6 @@
     "section": "",
     "text": "By the end of the lesson, you should be able to :\n\nuse geom_bar and geom_col to plot frequency vs. summary data\nuse summarise to calculate standard error and geom_errorbar to add error bars to a plot\nuse geom_point to create a scatter plot of two continuous variables",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 3"
@@ -257,7 +238,6 @@
     "section": "",
     "text": "There are two geoms in ggplot that draw bar plots, geom_barand geom_col.\nWhen you want to plot frequency/count data and are happy to let R to do the counting autoamtically, use geom_bar. It only requires that you tell it what you want on the x axis, and it will put frequency on the y axis.\nIf you want the height of the bar to represent a value you have calculated, then use geom_col. For this geom, you need to tell it what you want for both the x axis and the y axis.\nIn this screencast, we’ll review:\n\nHow to use geom_bar to plot count/frequency data\nHow to combine summarise and geom_col to plot mean bug levels by year\nHow to group_by more than one variable and use facet_wrap to plot mean bug levels by year, separately for each site\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse geom_bar and facet_wrap to plot the number of readings that were taken each year, separately for each site\nUse group_by and summarise with geom_col to plot the mean beach bug levels averaged across all the sites each year\nUse group_by and summarise with geom_col to plot the mean beach bug levels each year, using facet_wrap to plot each site separately",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 3"
@@ -270,7 +250,6 @@
     "section": "",
     "text": "Of course, good practice dictates that you need error bars on those columns. Never fear! Using summarise, it is easy to calculate standard error.\nIn this screencast, we’ll review:\n\nHow to use summarise to calculate the mean, standard deviation and standard error\nHow to add a geom_errorbar layer to your plot to display the mean beach bugs data in a column graph with error bars\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse group_by and summarise to calculate the mean, standard deviation, N, and standard error for each site\nPipe that summarise into a geom_col adding a coorid_flip and geom_errorbar layer",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 3"
@@ -283,7 +262,6 @@
     "section": "",
     "text": "Sometimes you want to visualise the relationship between two continuous variables using a scatterplot. Our original beachbugs dataset doesn’t include any interesting variables that might be correlated with the bacteria levels, so we have pulled in some weather data to see whether bacteria levels might be related to rainfall or temperature, or some combination of the two.\nYou can download the rain_temp_beachbugs.csv data here\n\nDon’t forget that #RYouWithMe has a data package and that you can use it to get the rain_temp_bugs data\n\nIn this screencast, we’ll review:\n\nHow to import the rain_temp_beachbugs.csv dataset into R\nHow to use geom_point and geom_smooth to plot a scatter plot and best fit line\nHow to use point color to illustrate potential interactions in your data\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nuse read_csv and here to read the rain_temp data into RStudio (need help? revisit Unit 1 Basic Basics Lesson 3: Loading Data\nuse geom_point to plot the relation between rainfall and beach bugs\nfilter the data for values more than 500 and add a geom_smooth layer to see a regression line\ncolour the points by the temperature variable\n\nNow that you’ve got the structural components of several of the most popular plots down, it’s time to learn how to customise the appearance of those plots! Onward to Lesson 4.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 3"
@@ -296,7 +274,6 @@
     "section": "",
     "text": "Welcome to the third unit of RYouWithMe! In Unit 3, we’re tackling data visualisation!\n\n\n\n\nUnit 3 has five lessons:\n\nPlotting Raw Data\nBoxes, Violins, and Histograms\nBars, Columns, and Scatterplots\nCustomising Plots\nGIFS! A VizW(h)iz Bonus Lesson\n\n\n\n\n\n\n\nTip\n\n\n\nThis unit gives you a taste of the kinds of plots you can build with ggplot. The R Graph Gallery is a really great resource for working out which kind of plot can best tell your data story.\n\n\n\n\n\nR-Ladies Sydney co-founders Lisa Williams and Jen Richmond, who conjured up the name of this unit, had different things in mind! Lisa had in mind “VizWiz” - as in Visualisation Wizardry! Jen had in mind “VizWhiz” - as in Becoming a Whiz in Visualisation!\nIt turns out this debate cannot be won (or lost). True, wizards are classically male - though we’re all about busting stereotypes at R-Ladies Sydney! Also true - while it’s great to be a whiz at something, we all know by know learning R isn’t such a speedy undertaking!\nTo bridge this great divide, we find ourselves with a compromise: VizW(h)iz!!\nLets start by plotting raw data",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz"
     ]
@@ -308,7 +285,6 @@
     "section": "",
     "text": "Welcome to the third unit of RYouWithMe! In Unit 3, we’re tackling data visualisation!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz"
     ]
@@ -320,7 +296,6 @@
     "section": "",
     "text": "Unit 3 has five lessons:\n\nPlotting Raw Data\nBoxes, Violins, and Histograms\nBars, Columns, and Scatterplots\nCustomising Plots\nGIFS! A VizW(h)iz Bonus Lesson\n\n\n\n\n\n\n\nTip\n\n\n\nThis unit gives you a taste of the kinds of plots you can build with ggplot. The R Graph Gallery is a really great resource for working out which kind of plot can best tell your data story.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz"
     ]
@@ -332,7 +307,6 @@
     "section": "",
     "text": "R-Ladies Sydney co-founders Lisa Williams and Jen Richmond, who conjured up the name of this unit, had different things in mind! Lisa had in mind “VizWiz” - as in Visualisation Wizardry! Jen had in mind “VizWhiz” - as in Becoming a Whiz in Visualisation!\nIt turns out this debate cannot be won (or lost). True, wizards are classically male - though we’re all about busting stereotypes at R-Ladies Sydney! Also true - while it’s great to be a whiz at something, we all know by know learning R isn’t such a speedy undertaking!\nTo bridge this great divide, we find ourselves with a compromise: VizW(h)iz!!\nLets start by plotting raw data",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz"
     ]
@@ -344,7 +318,6 @@
     "section": "",
     "text": "Producing reports is only the beginning when it comes to the utility of R Markdown. In this lesson we will walk through how to use R Markdown templates to produce ALL THE THINGS!\n\n\nBy the end of the lesson, you should be able to:\n\nuse R Markdown templates to create formatted documents\n\n\n\n\nIn this screencast, we’ll cover:\n\nHow to use the R Markdown template menu to knit all kinds of documents\n\n\n\nWatch the video and then fill your template list with options by installing some of R Markdown-based packages.\n\n\n\n\nblogdown\nradix\npagedown\nbookdown\nthesisdown\nrticles\nvitae\npapaja\nflexdashboard\nlearnr\ntufte\nremedy\nnamer\n\nxarigan\n\n\n\n\nFind more tips and tricks that we learned at our RMarkdownThrowdown event at the event github repository!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 4"
@@ -357,7 +330,6 @@
     "section": "",
     "text": "By the end of the lesson, you should be able to:\n\nuse R Markdown templates to create formatted documents",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 4"
@@ -370,7 +342,6 @@
     "section": "",
     "text": "In this screencast, we’ll cover:\n\nHow to use the R Markdown template menu to knit all kinds of documents\n\n\n\nWatch the video and then fill your template list with options by installing some of R Markdown-based packages.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 4"
@@ -383,7 +354,6 @@
     "section": "",
     "text": "blogdown\nradix\npagedown\nbookdown\nthesisdown\nrticles\nvitae\npapaja\nflexdashboard\nlearnr\ntufte\nremedy\nnamer\n\nxarigan",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 4"
@@ -396,7 +366,6 @@
     "section": "",
     "text": "Find more tips and tricks that we learned at our RMarkdownThrowdown event at the event github repository!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 4"
@@ -409,7 +378,6 @@
     "section": "",
     "text": "Now that you have loaded your data into R, cleaned it up, and made some impressive looking plots, you probably want to show your analysis to someone else, who may or may not be an R user. R Markdown is a really easy way of creating analysis reports to share with others. It is also a useful tool for making sure that the analysis you do is well-documented and reproducible; use R Markdown and your future self will thank you.\nIn this lesson, we are going to walk through how to create a report using R Markdown, how to format text within your report, and add links, images, and gifs.\n\n\nBy the end of the lesson, you should be able to:\n\ncreate a R Markdown document (.rmd file)\nuse heading levels to create your document structure\nmake text bold and italics, and use quotes\nadd links, images, tweets, and gifs to your report\n\n\n\n\nIn this screencast, we’ll cover:\n\nHow to create a R Markdown document and knit it into a report\nHow to use headings, bold, italics, and quotes within your report\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nOpen a new R Markdown document and save it\nKnit the document\nDelete everything in the default template and knit it again\nPlay around with headings, putting text in bold and italics, and adding quotes\n\n\n\n\n\n\n\nYou can embed links to other web content in your R Markdown document using a combination of square and round brackets.\nPut the words that you want to use as the link in square brackets, and the url that you want to link to in round brackets.\n\n[find Rmd resources here](https://github.com/jenrichmond/RMarkdownThrowdown)\n\n\n\n\nUse similar notation to insert an image…\n\n![](nameofimage.png)\n\n\n\n\nTo embed gifs and tweets, choose “embed” …\n\n… and just copy and paste the code into your R Markdown document.\n\nIn this screencast, we’ll cover:\n\nHow to create links, add images, and embed tweets/gifs in a R Markdown document\n\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nWrite a sentence about your favourite Tidyverse package in your .rmd document and insert a link to the vignette page for that package\nInsert an image of the hex for that package into your document\nFind a tweet about your favourite package and insert that into your document\nFind the famous gif of Hadley Wickham typing code and embed that into your document\nKnit your document!\n\n\n\n\n\nTo learn more about formatting your R Markdown document, check out the R Markdown: The Definitive Guide, a free book written in bookdown, by Yihui Xie.\nNext up in MarkyMark, lets talk about chunks. Head on to Lesson 2!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 1"
@@ -422,7 +390,6 @@
     "section": "",
     "text": "By the end of the lesson, you should be able to:\n\ncreate a R Markdown document (.rmd file)\nuse heading levels to create your document structure\nmake text bold and italics, and use quotes\nadd links, images, tweets, and gifs to your report",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 1"
@@ -435,7 +402,6 @@
     "section": "",
     "text": "In this screencast, we’ll cover:\n\nHow to create a R Markdown document and knit it into a report\nHow to use headings, bold, italics, and quotes within your report\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nOpen a new R Markdown document and save it\nKnit the document\nDelete everything in the default template and knit it again\nPlay around with headings, putting text in bold and italics, and adding quotes",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 1"
@@ -448,7 +414,6 @@
     "section": "",
     "text": "You can embed links to other web content in your R Markdown document using a combination of square and round brackets.\nPut the words that you want to use as the link in square brackets, and the url that you want to link to in round brackets.\n\n[find Rmd resources here](https://github.com/jenrichmond/RMarkdownThrowdown)\n\n\n\n\nUse similar notation to insert an image…\n\n![](nameofimage.png)\n\n\n\n\nTo embed gifs and tweets, choose “embed” …\n\n… and just copy and paste the code into your R Markdown document.\n\nIn this screencast, we’ll cover:\n\nHow to create links, add images, and embed tweets/gifs in a R Markdown document\n\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nWrite a sentence about your favourite Tidyverse package in your .rmd document and insert a link to the vignette page for that package\nInsert an image of the hex for that package into your document\nFind a tweet about your favourite package and insert that into your document\nFind the famous gif of Hadley Wickham typing code and embed that into your document\nKnit your document!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 1"
@@ -461,7 +426,6 @@
     "section": "",
     "text": "To learn more about formatting your R Markdown document, check out the R Markdown: The Definitive Guide, a free book written in bookdown, by Yihui Xie.\nNext up in MarkyMark, lets talk about chunks. Head on to Lesson 2!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 1"
@@ -474,7 +438,6 @@
     "section": "",
     "text": "Which beach is dirtiest? Which council does the best job of preventing beach contamination? Have beaches been getting cleaner in the past 5 years? We can answer all of your questions about the Sydney Beaches dataset, but first we need to do some tidying up.\nIn this lesson, we’re going to try out the janitor package and use functions from dplyr, a package in the tidyverse that is designed for data wrangling, to rename and select columns. We will also introduce the idea of the pipe %&gt;%, which allows you to string commands together.\n\n\nBy the end of the lesson, you should be able to :\n\nclean up column names automatically using clean_names() or manually using rename()\ncreate subsets of data using select()\n“pipe” %&gt;% data through a series of dplyr functions\n\n\n\n\nWhen you enter data in Excel, you most often don’t think too much about what you call each column. After all, you just label them once and as long as they are meaningful to you, what does it matter if the column name is a long combination of CAPITALLETTERS, lowercaseletters, and numbers?\nWhen you are working with variables in R though, you need to type the name of each variable, every time you want to work with it. So, it makes sense to make your column names as simple, but meaningful as possible! Ideally, they should also be consistently formatted.\n\n\nJenny Bryan has really good advice about naming things. She recommends that you using a labelling system (for files, but the same principles apply for variable names) that makes everything readable by both the computer and by a human (right-now you, but also future you, and anyone else who might interact with your data!).\nIs there anything problematic about the column names in the sydneybeaches dataset?\nThe variable names are mostly ok, except for the one that contains the bacteria level values. “Enterococci (cfu/100ml)” sticks out as something I don’t want to type more than once. How ’bout you?\nIn this screencast, we’ll review:\n\nHow to reformat your column names to be consistent\nHow to change the name of variables that are unwieldy\n\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nMake sure you have the janitor and tidyverse packages installed and loaded\n\nClean up your column names using whichever method appeals to you most\n\nChange the name of the bacteria column to something that is meaningful to you, though we recommend ‘beachbugs’ if you want to stay consistent with the lesson!\n\n\n\n\n\nThe beaches dataset is not big; there are a lot of observations but we are only looking at 8 variables. Often you will be dealing with many more variables than this and sometimes you want to simplify your life by only looking at a subset of those variables. The select function from the dyplr package is useful for just this situation.\nIn this screencast, we’ll review:\n\nHow to select just a few variables for closer inspection\nHow to change the order that your variables appear\n\n\n\nWatch the video and then create a new dataframe that contains only the site, council, and beachbugs columns.\n\n\n\nThere are lots of old school R users who find the pipe the most confusing aspect of the tidyverse. For beginners, though, the pipe can be really intuitive! So, consider this one of the few benefits of learning R now!\nWhat is the pipe? The pipe is an operator from the magrittr package that allows you to take a dataset and “pipe” it through a series of functions in a step by step way. It looks like this: %&gt;%\n\nThe pipe allows you string operations together in a way that is really powerful and accomplishes a lot with relatively few lines of code.\nIn this screencast, we’ll review:\n\nHow to pipe a handful of cleaning, renaming, selecting commands together\nHow to write your clean data to a new .csv file\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nPipe together a series of commands that creates a new dataframe called cleanbeaches containing the output after you have\n\nCleaned the names\n\nRenamed the bacteria column\n\nSelected interesting columns\n\n\nWrite your cleanbeach data to a new .csv called “cleanbeaches.csv”\n\n\n\n\n\n\n\nNote\n\n\n\nOriginally the magrittr pipe %&gt;% was just a tidyverse thing, but since we first designed RYouWithMe, many R users, including those prefer “base” style R code, have recognised the value of being able to string together code operations.\nR version 4.1.0 now includes a “native” pipe |&gt; that you might see in other people’s code. It works the mostly same as the tidyverse pipe %&gt;%- you can read more about it here\n\n\n\n\n\n\nFirst, read your data in! (Need a refresher? Check out Basic Basics Lesson 3 here.\nTake a close look at your variable names.\nAre there any that are untenable? Use rename to whip them into shape\nHave you used similar formatting across your variables? Use clean_names or toupper or tolower (depending on your preference)\nHow many variables do you have? Does it make sense to pull just a few of the most interesting ones to look at? Use select to create a new dataframe of just the important stuff.\nPipe it all together Can you use the pipe to string together a series of operations, starting with read_csv and finishing with write_csv, with a series of piped cleaning operations in the middle??\nCleaned up columns? Check! Next up - exploring what’s in those rows!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 1"
@@ -487,7 +450,6 @@
     "section": "",
     "text": "By the end of the lesson, you should be able to :\n\nclean up column names automatically using clean_names() or manually using rename()\ncreate subsets of data using select()\n“pipe” %&gt;% data through a series of dplyr functions",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 1"
@@ -500,7 +462,6 @@
     "section": "",
     "text": "When you enter data in Excel, you most often don’t think too much about what you call each column. After all, you just label them once and as long as they are meaningful to you, what does it matter if the column name is a long combination of CAPITALLETTERS, lowercaseletters, and numbers?\nWhen you are working with variables in R though, you need to type the name of each variable, every time you want to work with it. So, it makes sense to make your column names as simple, but meaningful as possible! Ideally, they should also be consistently formatted.\n\n\nJenny Bryan has really good advice about naming things. She recommends that you using a labelling system (for files, but the same principles apply for variable names) that makes everything readable by both the computer and by a human (right-now you, but also future you, and anyone else who might interact with your data!).\nIs there anything problematic about the column names in the sydneybeaches dataset?\nThe variable names are mostly ok, except for the one that contains the bacteria level values. “Enterococci (cfu/100ml)” sticks out as something I don’t want to type more than once. How ’bout you?\nIn this screencast, we’ll review:\n\nHow to reformat your column names to be consistent\nHow to change the name of variables that are unwieldy\n\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nMake sure you have the janitor and tidyverse packages installed and loaded\n\nClean up your column names using whichever method appeals to you most\n\nChange the name of the bacteria column to something that is meaningful to you, though we recommend ‘beachbugs’ if you want to stay consistent with the lesson!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 1"
@@ -513,7 +474,6 @@
     "section": "",
     "text": "The beaches dataset is not big; there are a lot of observations but we are only looking at 8 variables. Often you will be dealing with many more variables than this and sometimes you want to simplify your life by only looking at a subset of those variables. The select function from the dyplr package is useful for just this situation.\nIn this screencast, we’ll review:\n\nHow to select just a few variables for closer inspection\nHow to change the order that your variables appear\n\n\n\nWatch the video and then create a new dataframe that contains only the site, council, and beachbugs columns.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 1"
@@ -526,7 +486,6 @@
     "section": "",
     "text": "There are lots of old school R users who find the pipe the most confusing aspect of the tidyverse. For beginners, though, the pipe can be really intuitive! So, consider this one of the few benefits of learning R now!\nWhat is the pipe? The pipe is an operator from the magrittr package that allows you to take a dataset and “pipe” it through a series of functions in a step by step way. It looks like this: %&gt;%\n\nThe pipe allows you string operations together in a way that is really powerful and accomplishes a lot with relatively few lines of code.\nIn this screencast, we’ll review:\n\nHow to pipe a handful of cleaning, renaming, selecting commands together\nHow to write your clean data to a new .csv file\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nPipe together a series of commands that creates a new dataframe called cleanbeaches containing the output after you have\n\nCleaned the names\n\nRenamed the bacteria column\n\nSelected interesting columns\n\n\nWrite your cleanbeach data to a new .csv called “cleanbeaches.csv”\n\n\n\n\n\n\n\nNote\n\n\n\nOriginally the magrittr pipe %&gt;% was just a tidyverse thing, but since we first designed RYouWithMe, many R users, including those prefer “base” style R code, have recognised the value of being able to string together code operations.\nR version 4.1.0 now includes a “native” pipe |&gt; that you might see in other people’s code. It works the mostly same as the tidyverse pipe %&gt;%- you can read more about it here",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 1"
@@ -539,7 +498,6 @@
     "section": "",
     "text": "First, read your data in! (Need a refresher? Check out Basic Basics Lesson 3 here.\nTake a close look at your variable names.\nAre there any that are untenable? Use rename to whip them into shape\nHave you used similar formatting across your variables? Use clean_names or toupper or tolower (depending on your preference)\nHow many variables do you have? Does it make sense to pull just a few of the most interesting ones to look at? Use select to create a new dataframe of just the important stuff.\nPipe it all together Can you use the pipe to string together a series of operations, starting with read_csv and finishing with write_csv, with a series of piped cleaning operations in the middle??\nCleaned up columns? Check! Next up - exploring what’s in those rows!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 1"
@@ -552,7 +510,6 @@
     "section": "",
     "text": "The real power of R Markdown comes when you start combining text and code. There are MANY advantages of putting notes alongside the code you are running. Even if your future self is the only person who benefits from those notes, they are invaluable. By using code chunks, R Markdown keeps the code with the output too, so someone else looking at your analysis can see what code you ran and what output you got.\n\n\nMe when I revisit my code from a few months ago: I’m getting to be more thorough with my comments, I promise! 😫 #DataScience #rstats #BiosystemsAnalyticsLab pic.twitter.com/NiXRTorbhd\n\n— Emine Fidan (@Em_The_Engineer) March 1, 2019\n\n\nIn this lesson, we are going to walk through how to use code chunks in R Markdown to create a reproducible report.\n\n\nBy the end of the lesson, you should be able to:\n\ninsert chunks of code in your R Markdown document\nuse the chunk settings to control what appears in your report\n\n\n\n\nIn this screencast, we’ll cover:\n\nHow to insert code chunks\nHow to control what appears in your document when you knit\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nInsert chunks to load the tidyverse package and read in the sydneybeaches data\nInsert chunks to recreate your favourite plot from VizW(h)iz]\nKnit your document, changing the chunk settings so that only the code and output appear in your document.\n\nNext up, Lesson 3 tackles export formats!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 2"
@@ -565,7 +522,6 @@
     "section": "",
     "text": "By the end of the lesson, you should be able to:\n\ninsert chunks of code in your R Markdown document\nuse the chunk settings to control what appears in your report",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 2"
@@ -578,7 +534,6 @@
     "section": "",
     "text": "In this screencast, we’ll cover:\n\nHow to insert code chunks\nHow to control what appears in your document when you knit\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nInsert chunks to load the tidyverse package and read in the sydneybeaches data\nInsert chunks to recreate your favourite plot from VizW(h)iz]\nKnit your document, changing the chunk settings so that only the code and output appear in your document.\n\nNext up, Lesson 3 tackles export formats!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 2"
@@ -591,7 +546,6 @@
     "section": "",
     "text": "Now that we have cleaned up our column names to make them easier to work with, we can start to answer some questions about what’s in those rows! In this lesson, we’re going to filter, arrange, group_by and summarise the beaches data to answer the following questions:\n\nQuestion A: Which beach has the highest recorded bacteria levels?\nQuestion B: Does Coogee or Bondi have more extreme bacteria levels? Which beach has the worst bacteria levels on average?\nQuestion C: Which council does the worst job at keeping their beaches clean?\n\n\n\nBy the end of the lesson, you should be able to :\n\nuse arrange to sort a dataframe and filter to select parts of the\nuse group_by and summarise to get summary statistics\npipe these functions together to answer questions about your data\n\n\n\n\nWhen we first looked at a summary of the sydneybeaches data, we could see that the highest value of beach bacteria in the dataset was 4900. I wonder which beach that came from? Here, we use arrange to sort the beach bugs data in descending order. We can also use the pipe to combine filter and arrange to look at extreme values within a particular site.\n\nIn this screencast, we’ll review:\n\nHow to use the arrange function to sort your data\nHow to use filter to look at just a subset of your data\nHow to use the pipe to combine filter and arrange functions\n\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nSort the sydney beaches data by beachbugs in descending order\nPick your favourite beach and determine whether its most extreme beachbug values are higher or lower than the worst day at Coogee.\n\n\n\n\n“Where should I swim?” you might ask… Well, to answer that question we need to compare bacteria levels across sites.\nTo do this, you can put more than one argument into a filter function. For example, you can filter for either Coogee or Bondi.\nIn this screencast, we’ll review:\n\nHow to use filter by more than one site\nHow to create grouped summary stats using group_by and summarise\nHow to use the pipe to combine filter, group_by, and summarise functions\n\n\n\nWatch the video and then carry out the following steps:\n\nPick two beaches to compare, use filter and the %in% operator\nUse group_by and summarise to work out which beach has the worst bacteria levels on average.\n\n\n\n\nLets practice our new dplyr skills, using group_by council (instead of site) and summarise to see which council does the best job at keeping its beaches clean.\nIn this screencast, we’ll review:\n\nHow to group_by more multiple variables to gain more insight into the summary statistics from summarise\nHow to assign the output of your summarise to a new object in your environment\n\n\n\n\n\n\n\nChoose a continuous variable and sort your data in descending order. Are the extreme values surprising?\nPick a categorical variable, filter for one level of that variable and then sort in descending order\nUse group_by and summarise to create summary statistics that answer a question you have about your data\n\nNext up - Clean It Up Lesson 3: Making New Variables\n\n\nCheck out this blog series by R-Lady Suzan Baert!\n\nSelecting\nFiltering\nSummarising",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 2"
@@ -604,7 +558,6 @@
     "section": "",
     "text": "By the end of the lesson, you should be able to :\n\nuse arrange to sort a dataframe and filter to select parts of the\nuse group_by and summarise to get summary statistics\npipe these functions together to answer questions about your data",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 2"
@@ -617,7 +570,6 @@
     "section": "",
     "text": "When we first looked at a summary of the sydneybeaches data, we could see that the highest value of beach bacteria in the dataset was 4900. I wonder which beach that came from? Here, we use arrange to sort the beach bugs data in descending order. We can also use the pipe to combine filter and arrange to look at extreme values within a particular site.\n\nIn this screencast, we’ll review:\n\nHow to use the arrange function to sort your data\nHow to use filter to look at just a subset of your data\nHow to use the pipe to combine filter and arrange functions",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 2"
@@ -630,7 +582,6 @@
     "section": "",
     "text": "Watch the video and then carry out the following steps:\n\nSort the sydney beaches data by beachbugs in descending order\nPick your favourite beach and determine whether its most extreme beachbug values are higher or lower than the worst day at Coogee.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 2"
@@ -643,7 +594,6 @@
     "section": "",
     "text": "“Where should I swim?” you might ask… Well, to answer that question we need to compare bacteria levels across sites.\nTo do this, you can put more than one argument into a filter function. For example, you can filter for either Coogee or Bondi.\nIn this screencast, we’ll review:\n\nHow to use filter by more than one site\nHow to create grouped summary stats using group_by and summarise\nHow to use the pipe to combine filter, group_by, and summarise functions\n\n\n\nWatch the video and then carry out the following steps:\n\nPick two beaches to compare, use filter and the %in% operator\nUse group_by and summarise to work out which beach has the worst bacteria levels on average.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 2"
@@ -656,7 +606,6 @@
     "section": "",
     "text": "Lets practice our new dplyr skills, using group_by council (instead of site) and summarise to see which council does the best job at keeping its beaches clean.\nIn this screencast, we’ll review:\n\nHow to group_by more multiple variables to gain more insight into the summary statistics from summarise\nHow to assign the output of your summarise to a new object in your environment",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 2"
@@ -669,7 +618,6 @@
     "section": "",
     "text": "Choose a continuous variable and sort your data in descending order. Are the extreme values surprising?\nPick a categorical variable, filter for one level of that variable and then sort in descending order\nUse group_by and summarise to create summary statistics that answer a question you have about your data\n\nNext up - Clean It Up Lesson 3: Making New Variables\n\n\nCheck out this blog series by R-Lady Suzan Baert!\n\nSelecting\nFiltering\nSummarising",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 2"
@@ -681,6 +629,13 @@
     "title": "Welcome to the R-Ladies Sydney website",
     "section": "",
     "text": "This site provides a resource for the Sydney chapter so that anyone giving a talk, presenting a tutorial, or just wanting to share something awesome can contribute. It’s also where we archive information about our past events and links to the associated resources. The goal in putting this together is for everyone in the Sydney R-Ladies community to support each other, and to allow all members (whether they can make it to meetups or not) to feel part of and get something from the group. You can find out more about us - and how to contact us - on the about page, check out upcoming meetings on the meetup page, or browse the occasional blog post written by the Sydney R-Ladies. Don’t forget to follow us on BlueSky!\nIf you are a total R newbie- welcome!!\nYou might like to check out our #RYouWithMe course in the left sidebar. These modules were designed by beginners, for beginners and have videos that walk you through installing R and RStudio, getting your data in, cleaning it up a bit, making sweet visualisations and making beautiful (and reproducible) reports using RMarkdown. Enjoy!"
+  },
+  {
+    "objectID": "posts/2025-03-17-first-blog-post/index.html",
+    "href": "posts/2025-03-17-first-blog-post/index.html",
+    "title": "first blog post",
+    "section": "",
+    "text": "Your blog content could go here!!\nCheck out this post by Samantha Csik for details re how/why you might want to blog using Quarto."
   },
   {
     "objectID": "events.html",
@@ -703,7 +658,6 @@
     "section": "",
     "text": "When you knit a R Markdown document, the default format is html. But you can also generate pdf or word format documents.\nIn this lesson, we are going to walk through how to use knit to different formats and share documents via RPubs.\n\n\nBy the end of this lesson, you should be able to:\n\nknit your R Markdown document to produce a html, pdf, or word document\nshare your .Rmd report by publishing it to RPubs\n\n\n\n\nIn this screencast, we’ll cover:\n\nHow to knit to html, pdf, and word\nHow to share your report via RPubs\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nUse the knit pulldown to knit your document to pdf (you might need to install the tinytex package) and word\nCreate a RPubs account and share your document there.\n\nNext up, lets talk about templates…",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 3"
@@ -716,7 +670,6 @@
     "section": "",
     "text": "By the end of this lesson, you should be able to:\n\nknit your R Markdown document to produce a html, pdf, or word document\nshare your .Rmd report by publishing it to RPubs",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 3"
@@ -729,7 +682,6 @@
     "section": "",
     "text": "In this screencast, we’ll cover:\n\nHow to knit to html, pdf, and word\nHow to share your report via RPubs\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nUse the knit pulldown to knit your document to pdf (you might need to install the tinytex package) and word\nCreate a RPubs account and share your document there.\n\nNext up, lets talk about templates…",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark",
       "MarkyMark 3"
@@ -742,7 +694,6 @@
     "section": "",
     "text": "What if the data you are really interested in isn’t in your dataframe yet? Perhaps you want to break data contained in one variable across many variables, or to combine data from several columns into one. Maybe you want to transform your data or compute difference scores.\nIn this lesson, we will continue to explore the sydneybeaches data, learning how to compute new variables using separate, unite, mutate and other functions from dpylr.\n\n\nBy the end of the lesson, you should be able to :\n\nuse separate and unite to create new variables in your data\nuse mutate to compute new variables (numeric and logical)\npipe filter, arrange, group_by, and mutate together to accomplish a lot, with relatively few lines of code.\n\n\n\n\nWe are going to cheat a little bit with the date column here. We will learn how to use the lubridate package eventually, but for now, we can capitalise on the fact that R thinks our date column contains characters to practice splitting a single variable into several variables using the separate function.\n\n\n\n\n\n\nTip\n\n\n\nI ran a “Date Night” event for RLadies Sydney all about the lubridate package. Here is a short video covering 3 super useful things that the lubridate package can do to make working with dates easier\n\n\nIn this screencast, we’ll review:\n\nHow toseparate the date column into day, month, year\nHow to unite data from the site and council columns to create a new variable called site_council\n\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nSplit the date column into a day, month, and year column\nCombine the site and council columns into a single variable\n\n\n\n\nSometimes the data you are most interested are not in your dataframe yet, you need to compute them. The mutate function allows you to compute a new variable and add it to your dataframe.\nIn this screencast, we’ll review:\n\nHow to use the mutate function to\n\ntransform your data\ncompute numeric variables\ncompute logical variables\n\n\n\n\n\n\n\nWatch the video and then carry out the following steps:\n\nCompute a variable that log transforms the beachbugs data\nCompute a variable that contains beachbugs difference scores\nCompute a variable that contains TRUE/FALSE according to whether each reading is greater than the mean bug levels\n\n\n\n\nIn Clean It Up Lesson 1 you learned about the pipe %&gt;% - which can help you to string a whole series of wrangling functions together. To review, the pipe allows you to take your data, apply a function, take that output, apply another function, etc etc until you have added a series of new variables, all in a single chunk of code.\nIn this screencast, we’ll review:\n\nHow to pipe together a sequence of dplyr functions and assign the output to a new object in your environment\n\n\n\n\n\n\nWatch the video and then create a new dataframe called cleanbeaches_new by piping together the following steps…\n\nSeparate the date column into day, month, year\nCreate a new column that contains the log transformed beach bugs data\nCreate a new column that contains the difference scores\nCreate a new column that contains a logical vector re whether each beachbug reading is higher than average\nGroup_by site\nCreate a new column that contains a logical vector re whether each beachbug reading is higher than average, for each site\n\n\n\n\n\nChoose a variable in character format and separate it into several columns\nPick two character vectors, and combine them using the unite function\nUse mutate to transform your data, compute a new numeric variable, and compute a new logical variable.\n\nNext up - Clean It Up Lesson 4: Wide to Long",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 3"
@@ -755,7 +706,6 @@
     "section": "",
     "text": "By the end of the lesson, you should be able to :\n\nuse separate and unite to create new variables in your data\nuse mutate to compute new variables (numeric and logical)\npipe filter, arrange, group_by, and mutate together to accomplish a lot, with relatively few lines of code.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 3"
@@ -768,7 +718,6 @@
     "section": "",
     "text": "We are going to cheat a little bit with the date column here. We will learn how to use the lubridate package eventually, but for now, we can capitalise on the fact that R thinks our date column contains characters to practice splitting a single variable into several variables using the separate function.\n\n\n\n\n\n\nTip\n\n\n\nI ran a “Date Night” event for RLadies Sydney all about the lubridate package. Here is a short video covering 3 super useful things that the lubridate package can do to make working with dates easier\n\n\nIn this screencast, we’ll review:\n\nHow toseparate the date column into day, month, year\nHow to unite data from the site and council columns to create a new variable called site_council",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 3"
@@ -781,7 +730,6 @@
     "section": "",
     "text": "Watch the video and then carry out the following steps:\n\nSplit the date column into a day, month, and year column\nCombine the site and council columns into a single variable",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 3"
@@ -794,7 +742,6 @@
     "section": "",
     "text": "Sometimes the data you are most interested are not in your dataframe yet, you need to compute them. The mutate function allows you to compute a new variable and add it to your dataframe.\nIn this screencast, we’ll review:\n\nHow to use the mutate function to\n\ntransform your data\ncompute numeric variables\ncompute logical variables",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 3"
@@ -807,7 +754,6 @@
     "section": "",
     "text": "Watch the video and then carry out the following steps:\n\nCompute a variable that log transforms the beachbugs data\nCompute a variable that contains beachbugs difference scores\nCompute a variable that contains TRUE/FALSE according to whether each reading is greater than the mean bug levels",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 3"
@@ -820,7 +766,6 @@
     "section": "",
     "text": "In Clean It Up Lesson 1 you learned about the pipe %&gt;% - which can help you to string a whole series of wrangling functions together. To review, the pipe allows you to take your data, apply a function, take that output, apply another function, etc etc until you have added a series of new variables, all in a single chunk of code.\nIn this screencast, we’ll review:\n\nHow to pipe together a sequence of dplyr functions and assign the output to a new object in your environment",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 3"
@@ -833,7 +778,6 @@
     "section": "",
     "text": "Watch the video and then create a new dataframe called cleanbeaches_new by piping together the following steps…\n\nSeparate the date column into day, month, year\nCreate a new column that contains the log transformed beach bugs data\nCreate a new column that contains the difference scores\nCreate a new column that contains a logical vector re whether each beachbug reading is higher than average\nGroup_by site\nCreate a new column that contains a logical vector re whether each beachbug reading is higher than average, for each site",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 3"
@@ -846,7 +790,6 @@
     "section": "",
     "text": "Choose a variable in character format and separate it into several columns\nPick two character vectors, and combine them using the unite function\nUse mutate to transform your data, compute a new numeric variable, and compute a new logical variable.\n\nNext up - Clean It Up Lesson 4: Wide to Long",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 3"
@@ -859,7 +802,6 @@
     "section": "",
     "text": "Welcome to the fourth unit of RYouWithMe! In Unit 4, we’re tackling the one and only R Markdown!\n\n\n\n\n\n\nWarning\n\n\n\nSince we wrote RYouWithMe, RStudio has launched a new reporting tool called Quarto. It has all the same functionality as RMarkdown as well as extra formatting flexibility (hello callout boxes) and features that make it useful if you work in programming languages other than R.\nRMarkdown isn’t going anywhere and once you know how an .rmd file works, the transition to working with a .qmd file is pretty easy… but if you are keen to learn about Quarto check out the documentation here.\n\n\n\n\n\nUnit 4 has four lessons:\n\nFormatting in R Markdown\nCode Chunks in R Markdown\nExporting from R Markdown\nR Markdown Templates\n\nThis unit overview wouldn’t be complete without a gif of our naming inspo. We think this will be precisely his reaction when he finds out that an #rstats unit is named after him!\n\nMarky Wahlberg GIFfrom Marky GIFs",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark"
     ]
@@ -871,7 +813,6 @@
     "section": "",
     "text": "Welcome to the fourth unit of RYouWithMe! In Unit 4, we’re tackling the one and only R Markdown!\n\n\n\n\n\n\nWarning\n\n\n\nSince we wrote RYouWithMe, RStudio has launched a new reporting tool called Quarto. It has all the same functionality as RMarkdown as well as extra formatting flexibility (hello callout boxes) and features that make it useful if you work in programming languages other than R.\nRMarkdown isn’t going anywhere and once you know how an .rmd file works, the transition to working with a .qmd file is pretty easy… but if you are keen to learn about Quarto check out the documentation here.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark"
     ]
@@ -883,7 +824,6 @@
     "section": "",
     "text": "Unit 4 has four lessons:\n\nFormatting in R Markdown\nCode Chunks in R Markdown\nExporting from R Markdown\nR Markdown Templates\n\nThis unit overview wouldn’t be complete without a gif of our naming inspo. We think this will be precisely his reaction when he finds out that an #rstats unit is named after him!\n\nMarky Wahlberg GIFfrom Marky GIFs",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "MarkyMark"
     ]
@@ -895,7 +835,17 @@
     "section": "",
     "text": "Welcome to the second unit of RYouWithMe! In Unit 2, we’re moving on to data cleaning! Trust us, it’s more fun than housecleaning!\n\n\n\n\nUnit 2 has four lessons:\n\nDealing with Columns\nExploring the Rows\nMaking New Variables\nWide to Long to Wide to…PIVOT\n\n\n\n\nvia GIPHY\n\nFirst, dealing with columns",
     "crumbs": [
-      "Home",
+      "RYouWithMe",
+      "CleanItUp"
+    ]
+  },
+  {
+    "objectID": "courses/02-CleanItUp-0.html#overview",
+    "href": "courses/02-CleanItUp-0.html#overview",
+    "title": "Unit 2: Clean it up",
+    "section": "",
+    "text": "Welcome to the second unit of RYouWithMe! In Unit 2, we’re moving on to data cleaning! Trust us, it’s more fun than housecleaning!",
+    "crumbs": [
       "RYouWithMe",
       "CleanItUp"
     ]
@@ -907,7 +857,6 @@
     "section": "",
     "text": "Unit 2 has four lessons:\n\nDealing with Columns\nExploring the Rows\nMaking New Variables\nWide to Long to Wide to…PIVOT\n\n\n\n\nvia GIPHY\n\nFirst, dealing with columns",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp"
     ]
@@ -919,7 +868,6 @@
     "section": "",
     "text": "Learning how to make wide data long, or long data wide, might be one of the biggest stumbling blocks that R learners encounter.\nBut don’t panic, there are NEW functions in the tidyr that make the process of converting your data from wide to long format and back again, much easier… so much so that, like RLady Sharla Gelfand, you might even get excited to do it!\n\n\nhonestly i used to dread having to reshape my data because it meant relearning spread() and gather() every single time but pivot_wider() and pivot_longer() are so easy to use that now i get excited when i have to do it 🤓\n\n— Sharla Gelfand (@sharlagelfand) April 21, 2020\n\n\n\n\nIn R circles there is a lot of talk of the need for “tidy data”. You can read more about what Hadley Wickham (creator of the Tidyverse) means by tidy data here, but in short, tidy data is when\n\nEach variable forms a column.\nEach observation forms a row.\nEach type of observational unit forms a table.\n\nWhen you entered your data in excel, you probably entered it in wide format. Data in wide format has observations spread across several columns; each column contains data from a different condition (or combination of conditions); wide data is messy.\nIn the wide example below, we have scores from participants who were tested twice (Time 1 and Time 2) after studying different lists of words under two different conditions (Condition 1 and Condition 2).\n\nIn contrast, data in long format has all the observations in a single column and variables in separate columns.\n\nMany functions in R assume your data is “tidy” and just work better when you feed them long data.\n\n\n\nNo, no, no… this is not as hard as it looks. R employs cute monsters under the hood to pivot your data from wide to long pivot_longer, or from long to wide pivot_wider. All in a single line of code.\n\nCredit to Allison Horst for the CUTE art.\nIn this lesson, we will use three different examples to illustrate how to use pivot_longer and pivot_wider to convert your data from wide to long and back to wide.\n\nGreat British Bakeoff data from Alison Hill\nSome summary data from our own sydneybeaches dataset\nA tricky example from a cognition experiment out of Dani Navarro’s lab\n\n\n\n\n\n\n\nTip\n\n\n\nIf you haven’t already, now is the time to install the RYouWithMe data package. Check out the package vignette or watch this video for details about how to install and use the package to read the bakers, beach summary and frames data.\n\n\nEach example is a little different, but in each case we can use pivot_longer and pivot_wider to switch between different formats. We’ll walk you through the process step by step, but the basic idea is shown graphically in this lovely animation made by Garrick Aden-Buie and adapted by Mara Averick.\n\n\n\n\nThanks to Alison Hill for sharing this example. This data is from a Great British Bakeoff challenge; I assume that bakers were tested on their ability to identify different spices.\nThe dataframe on the left is in wide format; the performance of each baker in each spice test is listed across different columns.\n Image credit: Alison Hill\nThe dataframe on the right is in long format; all of the accuracy scores are in a single column and information about which baker and spice test each observation came from are represented in separate variables.\n\n\nThe pivot_longer function will change your wide data to long format in a single line of code.\nYou need to tell it …\n\ndata = dataframe you want to pivot\nnames_to = name of column you want to create to capture condition (i.e. spice)\nvalues_to = name of column you want to contain data values (i.e. correct)\ncolumn X:column Y = range of columns that you have and want to pivot_longer (cinnamon_1:nutmeg_3)\n\n Image credit: Alison Hill\n\n\n\nThe pivot_wider function will change your long data to wide format in a single line of code.\nYou need to tell it …\n\ndata = dataframe you want to pivot\nnames_from = name of column you want to end up in several columns\nvalues_from = name of column that currently contains data values\n\n Image credit: Alison Hill\n\n\n\nHere is a link to the bakers data in wide format.\n\ndownload the data and put it in your data folder\nopen a new script\nload the tidyverse and here packages\nuse here and read_csv to read the bakers data (go back to Basic Basics if you’ve forgotten how this works)\nuse pivot_longer to convert the bakers data from wide to long, replicating Alison’s steps above.\n\n\n\n\n\nThe raw sydneybeaches data is helpfully already in long format, but I have created a couple of summary datasets so we can practice changing data from wide to long and back again.\nIn the wide format, I’ve averaged bug levels for each year and the beach sites appear in separate columns.\n\nIn long format, the bug levels from each site are all in a single column and year and site are represented as separate variables.\n\n\n\nHere is a link to the beaches summary in wide format\n\ndownload the data and put it in your data folder\nopen a new script\nload library tidyverse\nuse here and read_csv to read the beaches data (go back to Basic Basics if you’ve forgotten how this works)\nuse pivot_longer to convert the beaches data from wide to long\n\nIn this screencast, I walk you through how to use pivot_longer to make the wide beaches data long.\n\n\nIn this one, learn how to use pivot_wider to make long beaches data wide.\n\n\n\n\n\n\nThe bakers data and beaches data are relatively simple. What happens if there is more that one condition that you are trying to pivot across?\nThis sampling frames dataset comes from an experiment from Danielle Navarro’s lab. In this study, each participant made reasoning judgements about items either based on a category or property (condition). They made repeated judgements after being given a small, medium, and large “samples” of information. For each of these sampling conditions, there were 7 different items that participants made a judgement about.\nHere is what the data looks like in wide format.\n\nEach row contains all of the data from a single participant and the column represent information about BOTH sampling condition (small, medium, large) and item (1-7).\n\n\nHere is a link to the frames data in wide format.\n\ndownload the data and put it in your data folder\nopen a new script\nload the tidyverse and here packages\nuse here and read_csv to read the frames data (go back to Basic Basics if you’ve forgotten how this works)\nuse pivot_longer to convert the frames data from wide to long\n\n\n\n\n\nHopefully you ended up with a data frame that looks something like this.\n\nIf not, check out how you can add an extra argument to pivot_longer() and accomplish this pivot in a single step.\n\n\n\n\nIs your data in wide format? No problem. Sort out answers to the following questions and you can convert it to long format with a single line of code.\n\nWhat do you want your “names” column to be called?\nWhat are the “values”?\nWhich columns do you want to pivot?\n\n\n\n\nSome additional links that might be helpful!\n\nWhat is tidy data?\nPivoting tidily\nTidyR docs\nTidyTuesday pivot examples\n\nNow that your data is in long format- you are ready for VizWhiz!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 4"
@@ -932,7 +880,6 @@
     "section": "",
     "text": "In R circles there is a lot of talk of the need for “tidy data”. You can read more about what Hadley Wickham (creator of the Tidyverse) means by tidy data here, but in short, tidy data is when\n\nEach variable forms a column.\nEach observation forms a row.\nEach type of observational unit forms a table.\n\nWhen you entered your data in excel, you probably entered it in wide format. Data in wide format has observations spread across several columns; each column contains data from a different condition (or combination of conditions); wide data is messy.\nIn the wide example below, we have scores from participants who were tested twice (Time 1 and Time 2) after studying different lists of words under two different conditions (Condition 1 and Condition 2).\n\nIn contrast, data in long format has all the observations in a single column and variables in separate columns.\n\nMany functions in R assume your data is “tidy” and just work better when you feed them long data.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 4"
@@ -945,7 +892,6 @@
     "section": "",
     "text": "No, no, no… this is not as hard as it looks. R employs cute monsters under the hood to pivot your data from wide to long pivot_longer, or from long to wide pivot_wider. All in a single line of code.\n\nCredit to Allison Horst for the CUTE art.\nIn this lesson, we will use three different examples to illustrate how to use pivot_longer and pivot_wider to convert your data from wide to long and back to wide.\n\nGreat British Bakeoff data from Alison Hill\nSome summary data from our own sydneybeaches dataset\nA tricky example from a cognition experiment out of Dani Navarro’s lab\n\n\n\n\n\n\n\nTip\n\n\n\nIf you haven’t already, now is the time to install the RYouWithMe data package. Check out the package vignette or watch this video for details about how to install and use the package to read the bakers, beach summary and frames data.\n\n\nEach example is a little different, but in each case we can use pivot_longer and pivot_wider to switch between different formats. We’ll walk you through the process step by step, but the basic idea is shown graphically in this lovely animation made by Garrick Aden-Buie and adapted by Mara Averick.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 4"
@@ -958,7 +904,6 @@
     "section": "",
     "text": "Thanks to Alison Hill for sharing this example. This data is from a Great British Bakeoff challenge; I assume that bakers were tested on their ability to identify different spices.\nThe dataframe on the left is in wide format; the performance of each baker in each spice test is listed across different columns.\n Image credit: Alison Hill\nThe dataframe on the right is in long format; all of the accuracy scores are in a single column and information about which baker and spice test each observation came from are represented in separate variables.\n\n\nThe pivot_longer function will change your wide data to long format in a single line of code.\nYou need to tell it …\n\ndata = dataframe you want to pivot\nnames_to = name of column you want to create to capture condition (i.e. spice)\nvalues_to = name of column you want to contain data values (i.e. correct)\ncolumn X:column Y = range of columns that you have and want to pivot_longer (cinnamon_1:nutmeg_3)\n\n Image credit: Alison Hill\n\n\n\nThe pivot_wider function will change your long data to wide format in a single line of code.\nYou need to tell it …\n\ndata = dataframe you want to pivot\nnames_from = name of column you want to end up in several columns\nvalues_from = name of column that currently contains data values\n\n Image credit: Alison Hill\n\n\n\nHere is a link to the bakers data in wide format.\n\ndownload the data and put it in your data folder\nopen a new script\nload the tidyverse and here packages\nuse here and read_csv to read the bakers data (go back to Basic Basics if you’ve forgotten how this works)\nuse pivot_longer to convert the bakers data from wide to long, replicating Alison’s steps above.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 4"
@@ -971,7 +916,6 @@
     "section": "",
     "text": "The raw sydneybeaches data is helpfully already in long format, but I have created a couple of summary datasets so we can practice changing data from wide to long and back again.\nIn the wide format, I’ve averaged bug levels for each year and the beach sites appear in separate columns.\n\nIn long format, the bug levels from each site are all in a single column and year and site are represented as separate variables.\n\n\n\nHere is a link to the beaches summary in wide format\n\ndownload the data and put it in your data folder\nopen a new script\nload library tidyverse\nuse here and read_csv to read the beaches data (go back to Basic Basics if you’ve forgotten how this works)\nuse pivot_longer to convert the beaches data from wide to long\n\nIn this screencast, I walk you through how to use pivot_longer to make the wide beaches data long.\n\n\nIn this one, learn how to use pivot_wider to make long beaches data wide.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 4"
@@ -984,7 +928,6 @@
     "section": "",
     "text": "The bakers data and beaches data are relatively simple. What happens if there is more that one condition that you are trying to pivot across?\nThis sampling frames dataset comes from an experiment from Danielle Navarro’s lab. In this study, each participant made reasoning judgements about items either based on a category or property (condition). They made repeated judgements after being given a small, medium, and large “samples” of information. For each of these sampling conditions, there were 7 different items that participants made a judgement about.\nHere is what the data looks like in wide format.\n\nEach row contains all of the data from a single participant and the column represent information about BOTH sampling condition (small, medium, large) and item (1-7).\n\n\nHere is a link to the frames data in wide format.\n\ndownload the data and put it in your data folder\nopen a new script\nload the tidyverse and here packages\nuse here and read_csv to read the frames data (go back to Basic Basics if you’ve forgotten how this works)\nuse pivot_longer to convert the frames data from wide to long",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 4"
@@ -997,7 +940,6 @@
     "section": "",
     "text": "Hopefully you ended up with a data frame that looks something like this.\n\nIf not, check out how you can add an extra argument to pivot_longer() and accomplish this pivot in a single step.\n\n\n\n\nIs your data in wide format? No problem. Sort out answers to the following questions and you can convert it to long format with a single line of code.\n\nWhat do you want your “names” column to be called?\nWhat are the “values”?\nWhich columns do you want to pivot?\n\n\n\n\nSome additional links that might be helpful!\n\nWhat is tidy data?\nPivoting tidily\nTidyR docs\nTidyTuesday pivot examples\n\nNow that your data is in long format- you are ready for VizWhiz!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "CleanItUp",
       "CleanItUp 4"
@@ -1010,7 +952,6 @@
     "section": "",
     "text": "Until I1 started learning R about a year ago, I had only ever plotted averaged data. My plots looked like this…\n\nOr this….\n\nIn 2016, I remember seeing #barbarplots t-shirts and tote bags at a conference, but back then I didn’t know that the figures were made in R.\n\n\nCheck out this video for more info about the #barbarplots kickstarter campaign. And learn how to explode bar plots using code from here.\n\n\n\nBar plots with standard error bars obviously have their limitations, but what is the alternative? In this lesson, we’re going to learn about how to plot raw data using ggplot2. As in prior units, we’ll be using the sydneybeaches dataset, so be sure to have that on hand!\n\n\n\nBy the end of this lesson, you should be able to :\n\nuse geom_point, geom_jitter, and geom_quasirandom to plot raw data\nuse colour to differentiate subsets of data\nuse facet_wrap to plot subsets of data separately\ncombine dpylr functions like filter with ggplot\nuse ggsave to export plots\n\n\n\n\nIf the councils that look after our beaches are doing their job, beaches should be less contaminated than they were 5 years ago, right? Let’s plot bug levels over time and see whether things seem to be getting better.\nIn this screencast, we’ll review:\n\nHow to write cleaned data to a new csv file\nHow to plot raw data using geom_point, geom_jitter, and geom_quasirandom\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse geom_point to plot buglevels by year\nPlay with geom_jitter and geom_quasirandom; which one is your favourite?\nCheck out the ggbeeswarm vignette and try to make your quasirandom plot “smiley” or “frowny”\nTry geom_beeswarm too!\n\n\n\n\n\nThere doesn’t seem to be an obvious improvement in bug levels in the past 5 years. I wonder whether some beaches are just more variable than others. Let’s use colour to differentiate between different sites.\nIn this screencast, we’ll review:\n\nHow to plot raw data using geom_jitter\nHow to deal with NAs in your data\nHow to use coord_flip to make axis labels visible\nHow to differentiate subsets within your data by changing the point colour\nHow to coerce variables into a different data format\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse geom_jitter to plot bug levels for each site, differentiating between values from 2013-2018 with different coloured points\nTry colouring the points by another variable (perhaps council or month). How does the visualisation change?\n\n\n\n\n\nUsing colour is one way to differentiate between data points associated with different variables. Alternatively, you can group the data into different mini-plots using facet_wrap.\nIn this screencast, we’ll review:\n\nHow to use facet_wrap to visualise beachbug levels across years, separately for each site.\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and perform the following steps:\n\nUse geom_jitter and facet_wrap to plot buglevels by year, separately for each site\nTry plotting buglevels by site, separately for each year. Hint: maybe using coord_flip is a good idea!\n\n\n\n\n\nWhat if you only want to compare a couple of sites? Or restrict the range of scores to exclude obvious outliers? You can combine dyplyr functions like filter with ggplot using the pipe %&gt;%. (The pipe was covered in #RYouWithMe Unit Clean It Up Lesson 1! Need a refresher? Click here!)\nIn this screencast, we’ll review:\n\nHow to use combine filter and ggplot to plot subsets of your data\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and perform the following steps:\n\nPipe a filter function and a ggplot together to plot only values that are less than 1000\nTry changing the filter value to only plot values less than 500\nUse filter and ggplot to compare data from Coogee and Bondi\nPick your two favorite beaches and make a plot that compares the variability in beachbug values\n\n\n\n\n\nOf course, these beautiful plots are not much use if they are stuck in R Studio. The easiest way to export your plots and save them elsewhere on your computer is by using ggsave.\nIn this screencast, we’ll review:\n\nHow to export your plots using ggsave and here\n\n\n\n\n\nWatch the video and perform the following steps:\n\nAdd a ggsave call after each chunk of code in your script to save your plots to a folder in your RYouWithMe project called “output”\nUse the source button to run your code from top to bottom.\nFor Sydney-based R-Ladies: Pick your favourite exported plot and post it to the #ryouwithme_3_vizwhiz channel on Slack!\n\n\n\n\nThe next step is to plot your own data as raw values.\nSteps to plotting your own raw data:\n\nRemember that ggplot only likes “long” data, so if you have observations across several columns, go back to Clean it up Lesson 4 and brush up on how to convert your wide data into long format\nPick a categorical variable for your x axis\nPick a continuous variable for your y axis\nTry out geom_point, geom_jitter, or geom_quasirandom and see which one makes the most sense for your data\nExport using ggsave\n\nIf you are one of our Sydney-based RLadies, share your success (and /or your frustration!) in our Slack channel #ryouwithme_3_vizwhiz!\n\n\nHere are some additional resources:\n\nPaul van der Laken makes a good argument against bar graphs in his blog post here\nHadley Wickham’s book R for Data Science is a good place to start re data visualisation.\nNick Tierney and Saskia Freytag were talking data visualisation with Di Cook on the Credibly Curious podcast recently. Check out the episode here.\n\nOn to Lesson 2",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 1"
@@ -1023,7 +964,6 @@
     "section": "",
     "text": "Bar plots with standard error bars obviously have their limitations, but what is the alternative? In this lesson, we’re going to learn about how to plot raw data using ggplot2. As in prior units, we’ll be using the sydneybeaches dataset, so be sure to have that on hand!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 1"
@@ -1036,7 +976,6 @@
     "section": "",
     "text": "By the end of this lesson, you should be able to :\n\nuse geom_point, geom_jitter, and geom_quasirandom to plot raw data\nuse colour to differentiate subsets of data\nuse facet_wrap to plot subsets of data separately\ncombine dpylr functions like filter with ggplot\nuse ggsave to export plots",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 1"
@@ -1049,7 +988,6 @@
     "section": "",
     "text": "If the councils that look after our beaches are doing their job, beaches should be less contaminated than they were 5 years ago, right? Let’s plot bug levels over time and see whether things seem to be getting better.\nIn this screencast, we’ll review:\n\nHow to write cleaned data to a new csv file\nHow to plot raw data using geom_point, geom_jitter, and geom_quasirandom\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse geom_point to plot buglevels by year\nPlay with geom_jitter and geom_quasirandom; which one is your favourite?\nCheck out the ggbeeswarm vignette and try to make your quasirandom plot “smiley” or “frowny”\nTry geom_beeswarm too!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 1"
@@ -1062,7 +1000,6 @@
     "section": "",
     "text": "There doesn’t seem to be an obvious improvement in bug levels in the past 5 years. I wonder whether some beaches are just more variable than others. Let’s use colour to differentiate between different sites.\nIn this screencast, we’ll review:\n\nHow to plot raw data using geom_jitter\nHow to deal with NAs in your data\nHow to use coord_flip to make axis labels visible\nHow to differentiate subsets within your data by changing the point colour\nHow to coerce variables into a different data format\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse geom_jitter to plot bug levels for each site, differentiating between values from 2013-2018 with different coloured points\nTry colouring the points by another variable (perhaps council or month). How does the visualisation change?",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 1"
@@ -1075,7 +1012,6 @@
     "section": "",
     "text": "Using colour is one way to differentiate between data points associated with different variables. Alternatively, you can group the data into different mini-plots using facet_wrap.\nIn this screencast, we’ll review:\n\nHow to use facet_wrap to visualise beachbug levels across years, separately for each site.\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and perform the following steps:\n\nUse geom_jitter and facet_wrap to plot buglevels by year, separately for each site\nTry plotting buglevels by site, separately for each year. Hint: maybe using coord_flip is a good idea!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 1"
@@ -1088,7 +1024,6 @@
     "section": "",
     "text": "What if you only want to compare a couple of sites? Or restrict the range of scores to exclude obvious outliers? You can combine dyplyr functions like filter with ggplot using the pipe %&gt;%. (The pipe was covered in #RYouWithMe Unit Clean It Up Lesson 1! Need a refresher? Click here!)\nIn this screencast, we’ll review:\n\nHow to use combine filter and ggplot to plot subsets of your data\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and perform the following steps:\n\nPipe a filter function and a ggplot together to plot only values that are less than 1000\nTry changing the filter value to only plot values less than 500\nUse filter and ggplot to compare data from Coogee and Bondi\nPick your two favorite beaches and make a plot that compares the variability in beachbug values",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 1"
@@ -1101,7 +1036,6 @@
     "section": "",
     "text": "Of course, these beautiful plots are not much use if they are stuck in R Studio. The easiest way to export your plots and save them elsewhere on your computer is by using ggsave.\nIn this screencast, we’ll review:\n\nHow to export your plots using ggsave and here\n\n\n\n\n\nWatch the video and perform the following steps:\n\nAdd a ggsave call after each chunk of code in your script to save your plots to a folder in your RYouWithMe project called “output”\nUse the source button to run your code from top to bottom.\nFor Sydney-based R-Ladies: Pick your favourite exported plot and post it to the #ryouwithme_3_vizwhiz channel on Slack!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 1"
@@ -1114,7 +1048,6 @@
     "section": "",
     "text": "The next step is to plot your own data as raw values.\nSteps to plotting your own raw data:\n\nRemember that ggplot only likes “long” data, so if you have observations across several columns, go back to Clean it up Lesson 4 and brush up on how to convert your wide data into long format\nPick a categorical variable for your x axis\nPick a continuous variable for your y axis\nTry out geom_point, geom_jitter, or geom_quasirandom and see which one makes the most sense for your data\nExport using ggsave\n\nIf you are one of our Sydney-based RLadies, share your success (and /or your frustration!) in our Slack channel #ryouwithme_3_vizwhiz!\n\n\nHere are some additional resources:\n\nPaul van der Laken makes a good argument against bar graphs in his blog post here\nHadley Wickham’s book R for Data Science is a good place to start re data visualisation.\nNick Tierney and Saskia Freytag were talking data visualisation with Di Cook on the Credibly Curious podcast recently. Check out the episode here.\n\nOn to Lesson 2",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 1"
@@ -1127,7 +1060,6 @@
     "section": "Footnotes",
     "text": "Footnotes\n\n\nJen Richmond, R-Ladies Sydney co-founder and #RYouWithMe screencaster!↩︎",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 1"
@@ -1140,7 +1072,6 @@
     "section": "",
     "text": "When you want to capture the distribution of your data in a plot, without getting too far away from the raw data, box and whisker plots, violin plots, and histograms are likely to be useful. In this lesson, we’re tackling how to creat these plots using various geom commands!\n\n\nBy the end of the lesson, you should be able to:\n\nuse geom_boxplot and geom_violin to plot the distribution of raw data\nuse geom_histogram to eyeball whether your data is normally distributed\nlayer more than one geom to gain extra insight about the distribution of your data\n\n\n\n\nI don’t think I have used a box plot since primary school. In fact, I had to google what the lines on the box represent. Definitely check out the ggplot documentation here and ignore me when I try and convince you in the video that the interquartile range represents 75% of the data; it’s definitely 50%.\nBoxplots are so 1980 anyway; boxplots are out and violin plots are in.\n\nImage credit: https://xkcd.com/1967/\nIn this screencast, we’ll review:\n\nHow to use geom_boxplot\nHow to use geom_violin\nHow to combine these geoms with filter and facet_wrap\nHow to use the colour and fill aesthetics\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse geom_boxplot to plot the log-transformed buglevels by site\nUse geom_violin to plot log-transformed buglevels by year\nUse filter to only plot buggier than average days and add a facet_wrap to look at the violin plots for each site separately\nWhat happens when you filter for buggier_all? Does that change your plot?\nPlay around with colour and fill aesthetics. Do they work on the geom_boxplot too?\n\nHelpful hint: You can find ggplot documentation about violin plots here\n\n\n\n\nOften the quickest way to get an idea of whether your data is normally distributed is to plot a histogram. Let’s learn how to do that.\nIn this screencast, we’ll review:\n\nHow to use base graphics to get a quick and dirty histogram\nHow to combine filter and geom_histogram\nHow to alter the bin_width in geom_histogram\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse base graphics to plot the log transformed beachbugs data in a histogram. Does that look better?\n\nUse geom_histogram to plot log-transformed buglevels for Clovelly in 2018\nCompare this plot to one that uses the raw rather than log-transformed data. What is the most appropriate bin_width for this raw data?\n\n\n\n\n\nEach time you add a + to a ggplot, you are adding a layer, and there is no reason why those layers can’t be extra geoms!\nIn this screencast, we’ll review:\n\nHow to layer geom_boxplot, geom_violin, and geom_point to create combination plots\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nFilter for days that are buggier than average and then plot the log transformed beach bugs values for each site by combining geom_boxplot and geom_point\nUse geom_violin to plot the log transformed beach bugs values and layer geom_points; this time try colouring by council\n\n\n\n\n\nCheck out the results of a google image search for ‘ggplot violin’ here to get inspired!\nNow, apply that inspiration to your own data! Don’t forget ggsave() from VizW(h)iz 1 so you can show others your fantastic outputs!\nWe all know there are times when you need (read: are forced) to create boring bar or column plots! That’s what Lesson 3 is for! We also cover scatterplots, so all is not for naught! Head on to Lesson 3)!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 2"
@@ -1153,7 +1084,6 @@
     "section": "",
     "text": "By the end of the lesson, you should be able to:\n\nuse geom_boxplot and geom_violin to plot the distribution of raw data\nuse geom_histogram to eyeball whether your data is normally distributed\nlayer more than one geom to gain extra insight about the distribution of your data",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 2"
@@ -1166,7 +1096,6 @@
     "section": "",
     "text": "I don’t think I have used a box plot since primary school. In fact, I had to google what the lines on the box represent. Definitely check out the ggplot documentation here and ignore me when I try and convince you in the video that the interquartile range represents 75% of the data; it’s definitely 50%.\nBoxplots are so 1980 anyway; boxplots are out and violin plots are in.\n\nImage credit: https://xkcd.com/1967/\nIn this screencast, we’ll review:\n\nHow to use geom_boxplot\nHow to use geom_violin\nHow to combine these geoms with filter and facet_wrap\nHow to use the colour and fill aesthetics\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse geom_boxplot to plot the log-transformed buglevels by site\nUse geom_violin to plot log-transformed buglevels by year\nUse filter to only plot buggier than average days and add a facet_wrap to look at the violin plots for each site separately\nWhat happens when you filter for buggier_all? Does that change your plot?\nPlay around with colour and fill aesthetics. Do they work on the geom_boxplot too?\n\nHelpful hint: You can find ggplot documentation about violin plots here",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 2"
@@ -1179,7 +1108,6 @@
     "section": "",
     "text": "Often the quickest way to get an idea of whether your data is normally distributed is to plot a histogram. Let’s learn how to do that.\nIn this screencast, we’ll review:\n\nHow to use base graphics to get a quick and dirty histogram\nHow to combine filter and geom_histogram\nHow to alter the bin_width in geom_histogram\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nUse base graphics to plot the log transformed beachbugs data in a histogram. Does that look better?\n\nUse geom_histogram to plot log-transformed buglevels for Clovelly in 2018\nCompare this plot to one that uses the raw rather than log-transformed data. What is the most appropriate bin_width for this raw data?",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 2"
@@ -1192,7 +1120,6 @@
     "section": "",
     "text": "Each time you add a + to a ggplot, you are adding a layer, and there is no reason why those layers can’t be extra geoms!\nIn this screencast, we’ll review:\n\nHow to layer geom_boxplot, geom_violin, and geom_point to create combination plots\n\n\n\n\n\nHere’s the plot for reference:\n\n\n\nWatch the video and then carry out the following steps:\n\nFilter for days that are buggier than average and then plot the log transformed beach bugs values for each site by combining geom_boxplot and geom_point\nUse geom_violin to plot the log transformed beach bugs values and layer geom_points; this time try colouring by council",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 2"
@@ -1205,7 +1132,6 @@
     "section": "",
     "text": "Check out the results of a google image search for ‘ggplot violin’ here to get inspired!\nNow, apply that inspiration to your own data! Don’t forget ggsave() from VizW(h)iz 1 so you can show others your fantastic outputs!\nWe all know there are times when you need (read: are forced) to create boring bar or column plots! That’s what Lesson 3 is for! We also cover scatterplots, so all is not for naught! Head on to Lesson 3)!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "VizWhiz",
       "VizWhiz 2"
@@ -1229,7 +1155,6 @@
     "section": "",
     "text": "RYouWithMe barely scratches the surface when it comes to the power of R for data wrangling, visualisation and analysis, but hopefully you now have the basics under your belt and can forge a learning journey for yourself.\nHere are a few things that you might be interested in exploring next…\n\n\nNow that you have wrangled and visualised your data, you probably want to do some stats. The statistics you need to do depend a lot on your data and research question, but Danielle Navarro’s Learning Statistics with R book is a great place to start. The research methods team in Psychology at University of Glasgow have made their awesome PsyTeachR resources open to anyone too.\n\n\n\nRMarkdown is nice, but Quarto is where all the exciting developments are happening. Check out the quarto documentation and then explore blog posts by R users who have made the move to quarto.\n\nhow to make a quarto website by Jadey Ryan\nhow to make a quarto blog by Matthew Crump\nhow to add a quarto blog to an existing quarto website by Sam Csik\nhow to make quarto slides by Jilly Mackay\n\n\n\n\nJenny Bryan’s Happy with with R site is the best resource for learning about git and github. R for the Rest of Us also has a great series of videos walking you through the process of working with version control.\n\n\n\nR packages are great, but you will eventually get to the point that you want to write your own functions. The functions chapter in R for Data Science is a good place to start. I also like the resources in the STAT545 course by Jenny Bryan.\n\n\n\nThere are more and more great pacakges making tables. Here are a few favourites you might like to explore.\n\ngt\ngtsummary\nkableExtra\ntable1\ntableone",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "What's next?"
     ]
@@ -1241,7 +1166,6 @@
     "section": "",
     "text": "Now that you have wrangled and visualised your data, you probably want to do some stats. The statistics you need to do depend a lot on your data and research question, but Danielle Navarro’s Learning Statistics with R book is a great place to start. The research methods team in Psychology at University of Glasgow have made their awesome PsyTeachR resources open to anyone too.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "What's next?"
     ]
@@ -1253,7 +1177,6 @@
     "section": "",
     "text": "RMarkdown is nice, but Quarto is where all the exciting developments are happening. Check out the quarto documentation and then explore blog posts by R users who have made the move to quarto.\n\nhow to make a quarto website by Jadey Ryan\nhow to make a quarto blog by Matthew Crump\nhow to add a quarto blog to an existing quarto website by Sam Csik\nhow to make quarto slides by Jilly Mackay",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "What's next?"
     ]
@@ -1265,7 +1188,6 @@
     "section": "",
     "text": "Jenny Bryan’s Happy with with R site is the best resource for learning about git and github. R for the Rest of Us also has a great series of videos walking you through the process of working with version control.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "What's next?"
     ]
@@ -1277,7 +1199,6 @@
     "section": "",
     "text": "R packages are great, but you will eventually get to the point that you want to write your own functions. The functions chapter in R for Data Science is a good place to start. I also like the resources in the STAT545 course by Jenny Bryan.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "What's next?"
     ]
@@ -1289,7 +1210,6 @@
     "section": "",
     "text": "There are more and more great pacakges making tables. Here are a few favourites you might like to explore.\n\ngt\ngtsummary\nkableExtra\ntable1\ntableone",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "What's next?"
     ]
@@ -1301,7 +1221,6 @@
     "section": "",
     "text": "In this Basic Basics lesson we’re going to talk about packages. You likely won’t get very far in R without packages. Sure, you could write all the functions you need for your analysis yourself if you wanted, but the great thing about the #rstats community is that people write code, bundle it into packages, and then give them away FOR FREE because they are so terribly nice. Once you are an #rstats expert, you can create your own packages and give back, but for now let’s learn what packages are and how to use them.\n\n\nBy the end of the lesson, you should be able to :\n\nexplain what a package is\ninstall packages from the console (quadrant 2).\nuse the library function to load packages at the top of your script (and understand why it is best to do it there and not in the console!)\nfind useful information about how to use a particular package when you are trying something new.\n\n\n\n\nA package is a bundle of code that a generous person has written, tested, and then given away. Most of the time packages are designed to solve a specific problem, so they to pull together functions related to a particular data science problem (e.g., data wrangling, visualisation, inference). Anyone can write a package, and you can get packages from lots of different places, but for beginners the best thing to do is get packages from CRAN, the Comprehensive R Archive Network. It’s easier than any of the alternatives, and people tend to wait until their package is stable before submitting it to CRAN, so you’re less likely to run into problems. You can find a list of all the packages on CRAN here.\nSome packages are bundles of packages. For example, the tidyverse is an umbrella package that pulls together lots of individual data wrangling and visualisation packages, so that when you install tidyverse you get 8 packages for price of 1 (actually they are free, but you get what I mean). The packages in the tidyverse include:\n\nggplot2\ndplyr\ntidyr\nreadr\npurrr\ntibble\nstringr\nforcats\n\n\n\n\n\n\n\nNote\n\n\n\nThe Tidyverse team have been busy since we first developed RYouWithMe! In the videos, we work with Tidyverse version 1.2.1. Now in February 2025, the team have most recently released Tidyverse 2.0.0.\nSo what is different? The screenshot below shows the console output that appears after I run library(tidyverse). You will notice that the version numbers on each of the packages that make up the tidyverse have been updated AND that there are now 9 packages included with your Tidyverse install; the lubridate package, which makes working with dates easy, is now included in the Tidyverse bundle. The other package updates most often involve adding new functions and “deprecating” functions that are no longer the best solution to a data problem. This means that the function is still in the package and will still work, but you might get a little warning message recommending that you switch to a better version.\nWe have checked and all the functions we introduce in RYouWithMe still work just fine, so don’t worry too much if the that package version you can see in the videos is a bit different to the one you are using on your machine.\n\n\n\n\n\na screenshot of the console output after I run library(tidyverse)\n\n\n\n\n\nIn this screencast, we’ll cover:\n\nHow to install packages\nHow to use the library function to load packages when you want to use them\n\n \n\n\n\nWatch the video and then carry out the following steps:\n\nInstall the tidyverse and here packages\nAdd a section label to your script and library() calls to the top of your script to load the tidyverse and here packages. You’ll be using these packages to read in data in Basic Basics Lesson 3!\n\nBrowse the list of packages on CRAN, find one that looks interesting and install it (just because now you know how!) Hint - we will probably use the janitor and skimr packages soon, so have a go at installing those.\n\n\n\n\nInstalling and loading packages is all well and good - but knowing what they do is pretty important when you want to use them! CRAN requires that package authors write documentation that goes with their package and these documents are designed to give you an idea of what functions are included and what the package can be used for.\nWhen you are looking for information about a package there are a few places to look. Lets use the janitor package as an example…\n\n\nThe README file is most often pretty useful and sometimes includes examples of how to use functions from the package. Check out the janitor README here.\n\n\n\n\nA vignette is a long form guide to using the package and the functions within it. For the janitor package, there is a link to the vignette in the README file. Check out the janitor vignette here.\n\n\n\nYou can see when we google “how to use the janitor package R” the first things that come up are CRAN documentation but under that there are links to documentation, blog posts, and YouTube videos by other R users who have found the package helpful and written about it.\n\n\n\n\nTwitter used to be a great place to find people who have written about how to use a package; most of the generous and friendly #rstats people have now switched to Mastodon or BlueSky.\nNow that you have the tidyverse and here (and a few other potentially useful packages) installed, let’s learn how to read in some data in Lesson 3!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 2"
@@ -1314,7 +1233,6 @@
     "section": "",
     "text": "By the end of the lesson, you should be able to :\n\nexplain what a package is\ninstall packages from the console (quadrant 2).\nuse the library function to load packages at the top of your script (and understand why it is best to do it there and not in the console!)\nfind useful information about how to use a particular package when you are trying something new.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 2"
@@ -1327,7 +1245,6 @@
     "section": "",
     "text": "A package is a bundle of code that a generous person has written, tested, and then given away. Most of the time packages are designed to solve a specific problem, so they to pull together functions related to a particular data science problem (e.g., data wrangling, visualisation, inference). Anyone can write a package, and you can get packages from lots of different places, but for beginners the best thing to do is get packages from CRAN, the Comprehensive R Archive Network. It’s easier than any of the alternatives, and people tend to wait until their package is stable before submitting it to CRAN, so you’re less likely to run into problems. You can find a list of all the packages on CRAN here.\nSome packages are bundles of packages. For example, the tidyverse is an umbrella package that pulls together lots of individual data wrangling and visualisation packages, so that when you install tidyverse you get 8 packages for price of 1 (actually they are free, but you get what I mean). The packages in the tidyverse include:\n\nggplot2\ndplyr\ntidyr\nreadr\npurrr\ntibble\nstringr\nforcats\n\n\n\n\n\n\n\nNote\n\n\n\nThe Tidyverse team have been busy since we first developed RYouWithMe! In the videos, we work with Tidyverse version 1.2.1. Now in February 2025, the team have most recently released Tidyverse 2.0.0.\nSo what is different? The screenshot below shows the console output that appears after I run library(tidyverse). You will notice that the version numbers on each of the packages that make up the tidyverse have been updated AND that there are now 9 packages included with your Tidyverse install; the lubridate package, which makes working with dates easy, is now included in the Tidyverse bundle. The other package updates most often involve adding new functions and “deprecating” functions that are no longer the best solution to a data problem. This means that the function is still in the package and will still work, but you might get a little warning message recommending that you switch to a better version.\nWe have checked and all the functions we introduce in RYouWithMe still work just fine, so don’t worry too much if the that package version you can see in the videos is a bit different to the one you are using on your machine.\n\n\n\n\n\na screenshot of the console output after I run library(tidyverse)",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 2"
@@ -1340,7 +1257,6 @@
     "section": "",
     "text": "In this screencast, we’ll cover:\n\nHow to install packages\nHow to use the library function to load packages when you want to use them",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 2"
@@ -1353,7 +1269,6 @@
     "section": "",
     "text": "Watch the video and then carry out the following steps:\n\nInstall the tidyverse and here packages\nAdd a section label to your script and library() calls to the top of your script to load the tidyverse and here packages. You’ll be using these packages to read in data in Basic Basics Lesson 3!\n\nBrowse the list of packages on CRAN, find one that looks interesting and install it (just because now you know how!) Hint - we will probably use the janitor and skimr packages soon, so have a go at installing those.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 2"
@@ -1366,7 +1281,6 @@
     "section": "",
     "text": "Installing and loading packages is all well and good - but knowing what they do is pretty important when you want to use them! CRAN requires that package authors write documentation that goes with their package and these documents are designed to give you an idea of what functions are included and what the package can be used for.\nWhen you are looking for information about a package there are a few places to look. Lets use the janitor package as an example…\n\n\nThe README file is most often pretty useful and sometimes includes examples of how to use functions from the package. Check out the janitor README here.\n\n\n\n\nA vignette is a long form guide to using the package and the functions within it. For the janitor package, there is a link to the vignette in the README file. Check out the janitor vignette here.\n\n\n\nYou can see when we google “how to use the janitor package R” the first things that come up are CRAN documentation but under that there are links to documentation, blog posts, and YouTube videos by other R users who have found the package helpful and written about it.\n\n\n\n\nTwitter used to be a great place to find people who have written about how to use a package; most of the generous and friendly #rstats people have now switched to Mastodon or BlueSky.\nNow that you have the tidyverse and here (and a few other potentially useful packages) installed, let’s learn how to read in some data in Lesson 3!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 2"
@@ -1379,7 +1293,6 @@
     "section": "",
     "text": "Welcome to the first lesson of Basic Basics! Here at R-Ladies Sydney, we’re a pretty opinionated bunch. In this lesson, we’re going to impart our opinions1 on navigating RStudio and setting up your workflow. This forms the foundation of all future RYouWithMe lessons - so be sure to follow along carefully!\n\n\nBy the end of the lesson, you should:\n\nHave R and RStudio installed on your machine\nKnow your way around RStudio\n\nKnow how to create a Project file and a script in RStudio\nUnderstand the idea of a working directory and where your RYouWithMe files live\nUnderstand what happens in the “four quadrants” of RStudio\n\nHave adjusted your settings to make your RStudio life a little less painful (trust us on this one!)\n\n\n\n\nThe first step is pretty straightforward. First, install R then install RStudio.\n\n\n\n\n\n\nTip\n\n\n\nThis playlist of how-to videos from the amazing Danielle Navarro might be useful if you run into install drama on a Mac, PC, or Ubuntu machine.\n\n\nFor this lesson (and likely the rest of RYouWithMe), we’ll be using R v.3.5.1 (2018-07-02) – “Feather Spray” and RStudio Version 1.1.463. So, if you already had R and/or RStudio installed, best to check for version updates! It probably won’t make that much of a difference if you have an older version, but very occasionally it does matter. Also, note that our screenshots and screencasts will be use a Mac, but the instructions should broadly apply to PC users!\n\n\n\n\n\n\nNote\n\n\n\nWow time flies when you are having fun with R!\nThe RYouWithMe course was written WAY back in 2018, but all the code still works with newer versions of R and RStudio, and updated tidyverse packages. We last checked the code in February 2025, using R version 4.4.2 (2024-10-31) - “Pile of Leaves” and RStudio version 2024.12.0.467.\nNot sure which version of R or RStudio you have? This 90 second video from Lisa Lendaway shows you how to check which version you are working with.\n\n\n\n\n\nIn this screencast, we’ll review:\n\nThe overall layout of the default RStudio interface\nHow to create a project and organise your files\nHow to create a script\nThe four main quadrants of the RStudio interface and what you can expect to do in each.\n\n \n\n\n\nWatch the video and then carry out the following steps:\n\nCreate a new project and save it to an “RYouWithMe”” folder somewhere you’ll be able to access it again. This can be your Desktop, in Dropbox, or anywhere else sensible. You’ll be coming back to this for all your RYouWithMe lessons - so just be sure to remember where you put it!\nCreate a “scripts” and “data” folder within that folder.\nPlay around with expanding and reducing the components of the interface.\nCreate a script file and save it (to your scripts folder within RYouWithMe of course!)\n\nFor quick reference, here’s a screenshot of the quadrants and a brief explanation\n\n\nQ1 - contains: script, data, command to run script\nQ2 - contains: console\nQ3 - contains: environment\nQ4 - contains: files, plots, packages, help\n\n\n\n\nSome people like Rstudio to remember stuff from session to session. We think this is dangerous. So to avoid future hassle, we recommend that you change two settings.\nLocate Preferences (on Mac, this is in the RStudio menu). In the General tab, uncheck “Restore .RData…” and select “never” for “Save workspace…”\n\nTada!\nNow onto Lesson 2: Installing and Loading Packages!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 1"
@@ -1392,7 +1305,6 @@
     "section": "",
     "text": "By the end of the lesson, you should:\n\nHave R and RStudio installed on your machine\nKnow your way around RStudio\n\nKnow how to create a Project file and a script in RStudio\nUnderstand the idea of a working directory and where your RYouWithMe files live\nUnderstand what happens in the “four quadrants” of RStudio\n\nHave adjusted your settings to make your RStudio life a little less painful (trust us on this one!)",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 1"
@@ -1405,7 +1317,6 @@
     "section": "",
     "text": "The first step is pretty straightforward. First, install R then install RStudio.\n\n\n\n\n\n\nTip\n\n\n\nThis playlist of how-to videos from the amazing Danielle Navarro might be useful if you run into install drama on a Mac, PC, or Ubuntu machine.\n\n\nFor this lesson (and likely the rest of RYouWithMe), we’ll be using R v.3.5.1 (2018-07-02) – “Feather Spray” and RStudio Version 1.1.463. So, if you already had R and/or RStudio installed, best to check for version updates! It probably won’t make that much of a difference if you have an older version, but very occasionally it does matter. Also, note that our screenshots and screencasts will be use a Mac, but the instructions should broadly apply to PC users!\n\n\n\n\n\n\nNote\n\n\n\nWow time flies when you are having fun with R!\nThe RYouWithMe course was written WAY back in 2018, but all the code still works with newer versions of R and RStudio, and updated tidyverse packages. We last checked the code in February 2025, using R version 4.4.2 (2024-10-31) - “Pile of Leaves” and RStudio version 2024.12.0.467.\nNot sure which version of R or RStudio you have? This 90 second video from Lisa Lendaway shows you how to check which version you are working with.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 1"
@@ -1418,7 +1329,6 @@
     "section": "",
     "text": "In this screencast, we’ll review:\n\nThe overall layout of the default RStudio interface\nHow to create a project and organise your files\nHow to create a script\nThe four main quadrants of the RStudio interface and what you can expect to do in each.",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 1"
@@ -1431,7 +1341,6 @@
     "section": "",
     "text": "Watch the video and then carry out the following steps:\n\nCreate a new project and save it to an “RYouWithMe”” folder somewhere you’ll be able to access it again. This can be your Desktop, in Dropbox, or anywhere else sensible. You’ll be coming back to this for all your RYouWithMe lessons - so just be sure to remember where you put it!\nCreate a “scripts” and “data” folder within that folder.\nPlay around with expanding and reducing the components of the interface.\nCreate a script file and save it (to your scripts folder within RYouWithMe of course!)\n\nFor quick reference, here’s a screenshot of the quadrants and a brief explanation\n\n\nQ1 - contains: script, data, command to run script\nQ2 - contains: console\nQ3 - contains: environment\nQ4 - contains: files, plots, packages, help",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 1"
@@ -1444,7 +1353,6 @@
     "section": "",
     "text": "Some people like Rstudio to remember stuff from session to session. We think this is dangerous. So to avoid future hassle, we recommend that you change two settings.\nLocate Preferences (on Mac, this is in the RStudio menu). In the General tab, uncheck “Restore .RData…” and select “never” for “Save workspace…”\n\nTada!\nNow onto Lesson 2: Installing and Loading Packages!",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 1"
@@ -1457,36 +1365,9 @@
     "section": "Footnotes",
     "text": "Footnotes\n\n\nBecause these are opinions, you can probably find people who disagree. To each her own and all that!↩︎",
     "crumbs": [
-      "Home",
       "RYouWithMe",
       "BasicBasics",
       "BasicBasics 1"
     ]
-  },
-  {
-    "objectID": "courses/02-CleanItUp-0.html#overview",
-    "href": "courses/02-CleanItUp-0.html#overview",
-    "title": "Unit 2: Clean it up",
-    "section": "",
-    "text": "Welcome to the second unit of RYouWithMe! In Unit 2, we’re moving on to data cleaning! Trust us, it’s more fun than housecleaning!",
-    "crumbs": [
-      "Home",
-      "RYouWithMe",
-      "CleanItUp"
-    ]
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Coming soon…\nWould you like to write a blog post for us? Maybe about an event you attended or something you have learned recently? Get in touch with us at sydney@rladies.org.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfirst blog post\n\n\n\nQuarto\n\n\nR\n\n\nR-Ladies\n\n\n\nyou could write this blog post\n\n\n\nYour name\n\n\nMar 17, 2025\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2025-03-17-first-blog-post/index.html",
-    "href": "posts/2025-03-17-first-blog-post/index.html",
-    "title": "first blog post",
-    "section": "",
-    "text": "Your blog content could go here!!\nCheck out this post by Samantha Csik for details re how/why you might want to blog using Quarto."
   }
 ]

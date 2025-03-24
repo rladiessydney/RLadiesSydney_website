@@ -1,0 +1,6 @@
+# redirects
+
+/courses/ryouwithme/basicbasics    /courses/basicbasics    301
+/courses/ryouwithme/01-basicbasics-1/    /courses/01-basicbasics-1    301
+/courses/ryouwithme/01-basicbasics-2/    /courses/01-basicbasics-2    301
+/courses/ryouwithme/01-basicbasics-3/    /courses/01-basicbasics-3    301
